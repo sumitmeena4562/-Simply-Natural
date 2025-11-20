@@ -1,0 +1,160 @@
+   :root {
+       --bg: #fff;
+       --accent: #111827;
+       --muted: #6b7280;
+       --border: e5e7eb;
+   }
+
+   * {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       font-family: system-ui, -apple-system, sans-serif;
+       color: var(--accent);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+   }
+
+   #card {
+       border: 1px solid rgba(0, 0, 0, 0.219);
+       padding: 2rem;
+       border-radius: 1rem;
+       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.100), 0px 1px 3px rgba(0, 0, 0, 0.100);
+   }
+
+   h1 {
+       font-size: 24px;
+       font-weight: 700;
+       margin: 0 0 8px 0;
+   }
+
+   .lead {
+       color: var(--muted);
+       margin: 0 0 20px 0;
+       font-size: 15px;
+   }
+
+   code {
+       background: #f3f4f6;
+       padding: 2px 6px;
+       border-radius: 4px;
+       font-size: 13px;
+   }
+
+   #new-list-add-section {
+       display: flex;
+       gap: 12px;
+       margin-bottom: 20px;
+   }
+
+   input.new {
+       flex: 1;
+       padding: 12px 16px;
+       border: 1px solid #d1d5db;
+       border-radius: 1rem;
+       font-size: 0.9rem;
+       outline: none;
+   }
+
+   input.new:focus {
+       border-color: #2563eb;
+       box-shadow: 0px 0px 3px rgba(37, 99, 235, .1);
+   }
+
+   button.add {
+       background: #111827;
+       color: var(--bg);
+       border: none;
+       padding: 12px 14px;
+       border-radius: 10px;
+       font-weight: 600;
+       cursor: pointer;
+   }
+
+   button.add:active {
+       transform: scale(.999);
+   }
+
+
+   ul.tasklist {
+       list-style: none;
+       padding: 0;
+       margin: 0;
+       display: grid;
+       gap: 8px;
+   }
+
+   li.item {
+       display: flex;
+       align-items: center;
+       gap: 12px;
+       padding: 10px;
+       border-radius: 10px;
+       border: 1px solid #f1f3f5
+   }
+
+   .checkbox {
+       width: 18px;
+       height: 18px;
+       border-radius: 6px;
+       border: 1px solid #d1d5db;
+       display: inline-grid;
+       place-items: center;
+       cursor: pointer
+   }
+
+   .text {
+       flex: 1;
+       font-size: 14px;
+       color: var(--accent)
+   }
+
+   .text.done {
+       color: #9ca3af;
+       text-decoration: line-through
+   }
+
+   .btns {
+       display: flex;
+       gap: 8px
+   }
+
+   button.small {
+       background: transparent;
+       border: 0;
+       cursor: pointer;
+       padding: 6px;
+       border-radius: 8px
+   }
+
+   button.remove {
+       color: #ef4444
+   }
+
+   button.edit {
+       color: #2563eb
+   }
+
+
+   #empty {
+       font-size: 0.9rem;
+       padding: 18px;
+       border-radius: 10px;
+       border: 1px dashed #e6e9ee;
+       text-align: center;
+       color: var(--muted);
+   }
+
+   footer.info {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-top: 12px;
+       color: var(--muted);
+       font-size: 13px;
+   }

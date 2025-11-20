@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+     
+    </style>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div id="card">
+        <h1>To- Do List</h1>
+        <p class="lead">Add & remove tasks -- automatically saved in <code>localStorage</code>.</p>
+        <div id="new-list-add-section">
+            <input class="new" id="newTask" type="text" placeholder="What you want to do ?">
+            <button class="add" id="addBtn" onclick="addNewTask()">Add</button>
+        </div>
+        <ul class="tasklist" id="tasklist"></ul>
+
+        <div id="empty" class="empty">No task yet. Add one above!</div>
+        <footer class="info">
+            <div><span id="pendingCount">0 </span>pending</div>
+            <div>Store in <code>localStorage</code> </div>
+        </footer>
+    </div>
+
+    <script src="app.js">
+    </script>
+</body>
+
+</html>

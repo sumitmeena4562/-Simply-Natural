@@ -1,0 +1,790 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: transparent !important;
+    padding-left: 55.500px;
+}
+
+.navbar-brand {
+    position: relative;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+}
+
+.navbar-brand img {
+    width: 32px;
+    margin-right: 8px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 400;
+    color: #1a1a1a !important;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #5cb85c !important;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.price {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.cart-icon,
+.user-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #1a1a1a;
+}
+
+.cart-icon:hover,
+.user-icon:hover {
+    color: #5cb85c;
+}
+
+#web-name-logo-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-hero-container {
+    position: absolute;
+    top: 0;
+    z-index: -9;
+    height: 548.250px;
+    width: 100%;
+    background: url(resource/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0rem 0rem 5rem 5rem;
+    padding-top: 7rem;
+    padding-left: 4.5rem;
+    padding-right: 55%;
+}
+
+.home-hero-container h5 {
+    font-size: 112%;
+}
+
+.home-hero-container h1 {
+    display: flex;
+    font-size: 385%;
+}
+
+.hero-section-shop-now-btn {
+    margin-top: 5%;
+    border: none;
+    padding: 2.6% 6% 2.6% 6%;
+    background: #8DD348;
+    border-radius: 2rem;
+    color: white;
+    font-size: 80%;
+    font-weight: 600;
+
+}
+
+.dropdown-menu li {
+    background: white;
+}
+
+.home-info-2nd-section {
+    margin-top: 490px;
+    padding: 3.7rem 6rem;
+}
+
+.home-info-2nd-section-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #8DD348;
+}
+
+.home-info-2nd-section h5 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.home-info-2nd-section p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+}
+
+#shop-info-con-row-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    border: none !important;
+    border-radius: 1rem;
+}
+
+#shop-info-container {
+    padding: 0% 0% 7.7% 0%;
+}
+
+.card {
+    margin-right: 1rem;
+    border-radius: 1rem !important;
+    border: none;
+    overflow: hidden;
+}
+
+.card-body {
+    background: #EEEDF3;
+    padding: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem 1rem 0 0 !important;
+}
+
+.btn-card-2nd-section {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #8DD348;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#featured-plants-section {
+    height: 185.2vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#featured-plants-section h2 {
+    font-size: 250%;
+}
+
+#featured-plants-section p {
+    font-size: 94%;
+    color: #5d6167;
+    margin-bottom: 5%;
+}
+
+.featured-plants-section-card {
+    height: 75.679%;
+    width: 85.2%;
+}
+
+.card-body-2 {
+    background: white;
+}
+
+.card-img-top-2 {
+    border-radius: 0% !important;
+    margin-bottom: 4.42%;
+}
+
+#card-none-border {
+    border-radius: 0% !important;
+    margin-bottom: 1%;
+}
+
+.card-body-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: flex-start;
+}
+
+#card-text-aline {
+    text-align: justify;
+}
+
+.type-of {
+    text-align: justify;
+    color: #5d6167;
+    font-size: .85em;
+    margin-bottom: .5em;
+    display: block;
+    line-height: 1.3;
+    opacity: .6;
+}
+
+#card-title-2 {
+    margin-bottom: .5em;
+    padding: 0;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.star-rating-div {
+    height: 30%;
+    width: 100%;
+    display: flex;
+}
+
+.star-rating-div .fa-star {
+    color: rgba(0, 0, 0, 0.534);
+    font-weight: 0;
+    font-size: 70%;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.616);
+    -webkit-text-fill-color: transparent;
+}
+
+.price-oncard {
+    height: 28%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 6.78px;
+    font-size: 85%;
+    color: #5d6167;
+    font-weight: 800;
+}
+
+
+
+
+.images-con {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-on-btn-hover-effect {
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    border-radius: 50%;
+    color: black;
+    background: white;
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.cart-text-div {
+    position: absolute;
+    right: 60px;
+    top: 4%;
+    border-radius: 5px;
+    color: white;
+    background: #2c3e50;
+    opacity: 0;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.images-con:hover .card-on-btn-hover-effect {
+    opacity: 1;
+}
+
+.card-on-btn-hover-effect:hover+.cart-text-div {
+    opacity: 1;
+}
+
+.sale-wegit {
+    top: 4%;
+    left: 4%;
+    position: absolute;
+    background: white;
+    height: 10.7%;
+    width: 19.5%;
+    padding: 2% 4%;
+    font-size: 80%;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+}
+
+.price-on-active-sale {
+    text-decoration: line-through;
+    color: #5d616788;
+}
+
+.sale-price {
+    text-decoration: none;
+    margin-left: 1%;
+}
+
+.Need-help-in-choosing-the-right-plants-section {
+    background: url(resource/pexels-scottwebb-1931143.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 58.7vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.Need-help-in-choosing-the-right-plants-section-cover {
+    background: rgba(0, 0, 0, 0.384);
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.7rem;
+
+}
+
+.Need-help-in-choosing-the-right-plants-section h3 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+}
+
+.Need-help-in-choosing-the-right-plants-section p {
+    height: 22%;
+    width: 62.2%;
+    font-size: 0.94rem;
+    padding: 0% 2.223%;
+}
+
+.Need-help-in-choosing-the-right-plants-section-cover button {
+    padding: 1% 2.30%;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #8DD348;
+    color: #ffffff;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 2rem;
+}
+
+.Testimonials-section {
+    background: #F9F9F9;
+    height: 134vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#testimonials-sec-inner {
+    height: 100%;
+    width: 100%;
+    padding: 8.89% 0%;
+    margin: 0% 5.56%;
+
+}
+
+.testimonials-inner-sec {
+    height: 96.8vh;
+    width: 100%;
+    padding: 0% 4.1% 0% 0%;
+}
+
+#testimonials-inner-sec-one h2 {
+    font-size: 2.5rem;
+}
+
+#testimonials-inner-sec-one-p {
+    color: #5d6167;
+
+    font-size: 0.94rem;
+}
+
+.sarah-jones-info {
+    height: 46.2%;
+    width: 100%;
+    margin-top: 11.1%;
+    display: flex;
+}
+
+.sarah-jones-info-img {
+    height: 100%;
+    width: 40.8%;
+    border-radius: 5%;
+}
+
+.info-description {
+    padding: 7.1%;
+}
+
+.info-description-p {
+    color: #5d6167;
+    font-size: 0.9rem;
+    line-height: 190%;
+}
+
+.info-description-h5 {
+    font-size: 1.13rem;
+}
+
+.info-description-type {
+    font-size: 0.8rem;
+    color: #5d6167;
+
+}
+
+#testimonials-inner-sec-tow {
+    padding: 0% 0% 0% 4.1%;
+
+}
+
+.testimonial-info {
+    height: 44.8vh;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 6.8%;
+}
+
+.testimonial-img {
+    height: 100%;
+    width: 39.1%;
+}
+
+.jessica-foxx-description {
+    height: 100%;
+    width: 58.7%;
+    padding: 2%;
+}
+
+.interested-section {
+    height: 746px;
+    width: 100%;
+    position: relative;
+}
+
+.interested-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.interested-section-containt {
+    position: absolute;
+    width: 53.3%;
+    margin: 0% 23.32%;
+    padding: 5.93% 0% 29.6%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.interested-section-containt-h2 {
+    font-size: 2.53rem;
+    margin-bottom: 4%;
+}
+
+.interested-section-containt-p {
+    color: #5d6167;
+    font-size: .94rem;
+    margin-bottom: 5%;
+}
+
+.interested-section-containt-btn {
+    padding: 1.78% 4.9%;
+    border: none;
+    background: #8DD348;
+    border-radius: 2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.footer-section {
+    height: 72.6vh;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-section-containt {
+    height: 82.7%;
+    width: 100%;
+    padding-top: 7.699%;
+    padding-bottom: 5.923%;
+}
+
+#get-in-touch-sec {
+    height: 100%;
+    width: 21.9999%;
+}
+
+.websiteinfo {}
+
+#get-in-touch-se {
+    width: 31.333333% !important;
+}
+
+#logo-col {
+    width: 31.333333% !important;
+}
+
+#footer-section-row {
+    margin-left: 5.552%;
+    margin-right: 5.552%;
+}
+
+.icon-wrape {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon-wrape button {
+    border-radius: 50%;
+    border: none;
+    background: #4E5768;
+    color: #EEEDF3;
+    padding: 2.4% 3.11%;
+    font-size: 0.9rem;
+
+}
+
+.websideinfo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.quick-links-inner {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.quick-links-inner span {
+    font-size: 14px;
+    line-height: 2em;
+}
+
+.copyright-section {
+    height: 13vh;
+    width: 100%;
+    padding: 2.2% 0%;
+}
+
+#row-foter {
+    width: 95%;
+    height: 82%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 0%;
+    padding: 8% 1%
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-left: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .navbar-brand img {
+        width: 24px;
+    }
+
+    .nav-icons {
+        margin-left: 10px;
+        gap: 8px;
+    }
+
+    .home-hero-container {
+        height: 400px;
+        border-radius: 0rem 0rem 3rem 3rem;
+        padding-top: 7rem;
+        padding-left: 4rem;
+        padding-right: 24rem;
+    }
+
+    .home-hero-container h5 {
+        font-size: 1.2rem;
+
+    }
+
+    .home-hero-container h1 {
+        font-size: 2rem;
+    }
+
+    .Home-info-section {
+        margin-top: 430px;
+    }
+
+    .home-info-2nd-section {
+        margin-top: 430px;
+        padding: 2rem 2rem;
+    }
+
+    #shop-info-con-row-flex {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 350px;
+        margin-bottom: 2rem;
+    }
+
+    #featured-plants-section {
+        height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .featured-plants-section-card {
+        width: 100%;
+    }
+
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding-left: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar-brand img {
+        width: 20px;
+    }
+
+    .nav-icons {
+        margin-left: 5px;
+        gap: 5px;
+    }
+
+    .price {
+        font-size: 0.9rem;
+    }
+
+    .cart-icon,
+    .user-icon {
+        font-size: 1rem;
+    }
+
+    .home-hero-container {
+        height: 300px;
+        border-radius: 0rem 0rem 2rem 2rem;
+        padding-left: 5rem;
+        padding-right: 17rem;
+    }
+
+    .Home-info-section {
+        margin-top: 330px;
+    }
+
+    .home-info-2nd-section {
+        margin-top: 330px;
+        padding: 2rem 1rem;
+    }
+
+    .home-info-2nd-section-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .home-hero-container h5 {
+        font-size: 1rem;
+    }
+
+    .home-hero-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section-shop-now-btn {
+        padding: 3% 8%;
+        font-size: 0.8rem;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 300px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    #shop-info-con-row-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #featured-plants-section {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    #featured-plants-section h2 {
+        font-size: 2rem;
+    }
+
+    .featured-plants-section-card {
+        width: 100%;
+    }
+
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #card-none-border {
+        width: 100% !important;
+        max-width: 280px;
+        margin: 0 auto 1rem;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #121212;
+      color: #00ff88;
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="timer">10:00</div>
+
+  <script>
+    // Timer duration (in seconds) — 10 minutes = 600 seconds
+    let timeLeft = 10 * 60;
+
+    const timerDisplay = document.getElementById("timer");
+
+    function updateTimer() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+
+      // Format: 09:05
+      timerDisplay.textContent = 
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+      if (timeLeft > 0) {
+        timeLeft--;
+      } else {
+        clearInterval(timerInterval);
+        timerDisplay.textContent = "⏰ Time's up!";
+      }
+    }
+
+    // Update every second
+    const timerInterval = setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valid Form!</title>
+</head>
+<body>
+    <form id="signup-form">
+        <label for="Name">Name:
+            <input type="text" id="name" required>
+        </label>
+        <br><br>
+        <label for="email">Email:
+            <input type="text" id="email" required>
+        </label>
+        <br><br>
+        <label for="passowrd">Password:
+            <input type="password" id="password" required>
+        </label>
+        <br><br>
+        <button type="submit">submit</button>
+        <p id="error-msg" style="color: red;"></p>
+    </form>
+    <script>
+        const form=document.getElementById("signup-form");
+        const errorMsg=document.getElementById("error-msg");
+
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+
+            const name=document.getElementById("name").value.trim();
+            const email=document.getElementById("email").value.trim();
+            const passowrd=document.getElementById("password").value;
+
+            if(!name|| !email|| !passowrd){
+                errorMsg.textContent="All field are required!";
+                return;
+            }
+            const emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if(!emailPattern.test(email)){
+                errorMsg.textContent="Enter a valid email";
+                return;
+            }
+
+            const passowrdPattern= /^(?=.*[A-Z])(?=.*\d).{6,}$/;
+            if(!passowrdPattern.test(passowrd)){
+                errorMsg.textContent="Password must be at least 6 character, include 1 uppercase letter and 1 number.";
+                return;
+            }
+            errorMsg.textContent="";
+            alert("Form submitted successfully!");
+            form.reset();
+        })
+    </script>
+</body>
+</html>

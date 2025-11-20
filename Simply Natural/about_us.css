@@ -91,6 +91,24 @@ body {
 }
 
 .image-overlay h1 {
-    color: var(--text-color);
+    color: rgba(0, 0, 0, 0.671);
     font-size: 4rem;
+}
+
+#about-us-summry{
+    height: 67.287vh;
+    width: 90%;
+    padding: 104px 0px;
+    margin: 0px 75.500px;
+}
+
+#read-more-btn{
+    background: #8DD348 !important;
+    border: none !important;
+    padding: 20px 32px;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+
 }

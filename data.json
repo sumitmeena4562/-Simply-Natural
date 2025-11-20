@@ -1,0 +1,135 @@
+[
+    {
+        "id": 1,
+        "name": "Beautiful Plant Varieties",
+        "desc": "Luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+        "image": "resource/plant6-free-img.jpg",
+        "link": "#",
+        "btn": "See Collection",
+        "category": "home-info"
+    },
+    {
+        "id": 2,
+        "name": "Green Cactus Collection",
+        "desc": "Perfect for indoor decoration and easy to maintain.",
+        "image": "resource/cactus2-free-img.jpg",
+        "link": "#",
+        "btn": "See Collection",
+        "category": "home-info"
+    },
+    {
+        "id": 3,
+        "name": "Indoor Plant Special",
+        "desc": "Beautiful plants that purify your home air naturally.",
+        "image": "resource/plant4-free-img.jpg",
+        "link": "#",
+        "btn": "Visit the store",
+        "category": "home-info"
+    },
+    {
+        "id": 4,
+        "name": "Boncellensis Seullant",
+        "type": "Plants",
+        "image":"resource/plant3-free-img.jpg",
+        "price": "$34.00",
+        "category": "Featured Plants",
+        "onSale": false,
+        "salePrice":""
+    },
+     {
+        "id": 5,
+        "name": "Cleistocutus",
+        "type": "Cactus",
+        "image":"resource/cactus2-free-img.jpg",
+        "price": "$28.00",
+        "category": "Featured Plants",
+        "onSale": true,
+        "salePrice":"$25.00"
+
+
+    },
+    {
+        "id": 6,
+        "name": "Green Soil Lotus",
+        "type": "Plants",
+        "image":"resource/plant5-free-img.jpg",
+        "price": "$54.00",
+        "category": "Featured Plants",
+        "onSale": true,
+        "salePrice":"$34.00"
+
+
+    },
+     {
+        "id": 7,
+        "name": "Money Plant",
+        "type": "Plants",
+        "image":"resource/plant1-free-img.jpg",
+        "price": "$23.00",
+        "category": "Featured Plants",
+        "onSale": true,
+        "salePrice":"$20.00"
+
+
+    },
+     {
+        "id": 8,
+        "name": "Old Lady Cuctus",
+        "type": "Cactus",
+        "image":"resource/cactus4-free-img.jpg",
+        "price": "$15.00",
+        "category": "Featured Plants",
+        "onSale": true,
+        "salePrice":"$12.00"
+
+
+    },
+     {
+        "id": 9,
+        "name": "Piorro Quisquam",
+        "type": "Plants",
+        "image":"resource/plant4-free-img.jpg",
+        "price": "$32.00",
+        "category": "Featured Plants",
+        "onSale": false,
+        "salePrice":""
+
+
+    },
+     {
+        "id": 10,
+        "name": "Rattle Snake Tail",
+        "type": "Plants",
+        "image":"resource/plant6-free-img.jpg",
+        "price": "$45.00",
+        "category": "Featured Plants",
+        "onSale": false,
+        "salePrice":""
+
+
+    },
+     {
+        "id": 11,
+        "name": "Star Cactus",
+        "type": "Cactus",
+        "image":"resource/cactus6-free-img.jpg",
+        "price": "$34.00",
+        "category": "Featured Plants",
+        "onSale": true,
+        "salePrice":"$30.00"
+
+        
+    },
+    {
+        "id": 12,
+        "name": "Aluminum Plant",
+        "type": "Plants",
+        "image":"resource/plant2-free-img.jpg",
+        "price": "$34.00",
+        "category": "Featured Plants",
+        "onSale": true,
+        "salePrice":"$30.00"
+        
+    }
+
+]

@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cactus - Simply Natural</title>
-    <link rel="stylesheet" href="cactos.css">
-     <link rel="icon" href="resource/plants-store-logo-green.svg" type="image/svg+xml">
+    <link rel="icon" href="resource/plants-store-logo-green.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="cactos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,36 +45,21 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
                 <ul class="navbar-nav ms-auto">
-
                     <li class="nav-item">
-
                         <a class="nav-link" href="index.html">Home</a>
-
                     </li>
-
                     <li class="nav-item dropdown">
-
                         <a class="nav-link dropdown-toggle active" href="store.html" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Store</a>
-
                         <ul class="dropdown-menu">
-
-                            <li><a class="dropdown-item" href="#" data-filter="all">All Products</a></li>
-
-                            <li><a class="dropdown-item" href="#" data-filter="Plants">Plants</a></li>
-
-                            <li><a class="dropdown-item" href="#" data-filter="Cactus">Cactus</a></li>
-
+                            <li><a class="dropdown-item" href="store.html">All Products</a></li>
+                            <li><a class="dropdown-item" href="plants.html">Plants</a></li>
+                            <li><a class="dropdown-item" href="Cactos.html">Cactus</a></li>
                         </ul>
-
                     </li>
-
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="#">My Account</a></li>
-
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="my_account.html">My Account</a></li>
                 </ul>
 
 
@@ -225,9 +211,28 @@
         </div>
 
     </footer>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="app.js"></script>
+    <!-- Cart Modal -->
+    <div class="cart-overlay"></div>
+    <div class="cart-modal">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <span class="cart-close" onclick="closeCart()">&times;</span>
+        </div>
+        <div class="cart-body">
+            <div class="cart-empty">Your cart is empty</div>
+        </div>
+        <div class="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span>$0.00</span>
+            </div>
+            <button class="cart-checkout">Checkout</button>
+        </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

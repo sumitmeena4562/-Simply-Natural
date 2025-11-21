@@ -1,0 +1,103 @@
+/* Page Specific Styles */
+body {
+    background: #f9f9f9;
+}
+
+.navbar {
+    background-color: white !important;
+    padding: 1rem 4rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#account-section {
+    padding: 75px 20px;
+    max-width: 1238px;
+}
+
+.login-box,
+.register-box {
+    background: white;
+    padding: 80px 100px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+#form-broder {
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    padding: 20px;
+    margin: 2em 0;
+    text-align: left;
+    border-radius: 5px;
+}
+
+/* Form Elements */
+.form-control {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(141, 211, 72, 0.25);
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--dark-text);
+}
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #5d6167;
+}
+
+/* Buttons */
+.btn-login,
+.btn-register {
+    background: var(--primary-green);
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    background: var(--hover-green);
+    transform: translateY(-2px);
+}
+
+/* Links */
+.lost-password {
+    display: block;
+    margin-top: 15px;
+    color: var(--primary-green);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.lost-password:hover {
+    text-decoration: underline;
+}
+
+.icon-wrape button {
+    background: #4E5768;
+}

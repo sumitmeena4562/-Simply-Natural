@@ -3,6 +3,7 @@ function getShofinfoCartd() {
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('shop-info-con-row-flex');
+      if (!container) return;
       container.innerHTML = '';
 
       data.forEach(item => {
@@ -32,11 +33,14 @@ function getplantShopData() {
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('featured-plants-section-card-row');
+      if (!container) return;
       container.innerHTML = '';
       data.forEach(item => {
         if (item.category === "Featured Plants") {
           let onSalediv = ``;
           let priceHTML = ``;
+          const finalPrice = item.onSale ? parseFloat(item.salePrice.replace('$', '')) : parseFloat(item.price.replace('$', ''));
+          
           if (item.onSale === true) {
             onSalediv = `<div class="sale-wegit">Sale!</div>`;
             priceHTML = `<div class="price-oncard">
@@ -54,7 +58,7 @@ function getplantShopData() {
                         <div class="images-con">
                          ${onSalediv}
                             <img style="height: 17rem;"  src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${finalPrice}, image: "${item.image}"}, event)'><i class="fa-solid fa-bag-shopping"></i></div>
                             <div class="cart-text-div">Add to Cart</div>
                         </div>
                         <p class="type-of">${item.type}</p>
@@ -85,11 +89,13 @@ function getCardataForStorePAge() {
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById("featured-plants-container-row");
+      if (!container) return;
       container.innerHTML = "";
       data.forEach(item => {
         if (item.id === 4 || item.id === 5 || item.id === 6) {
           let saleWgit = ``;
           let priceHTML = ``;
+          const finalPrice = item.onSale ? parseFloat(item.salePrice.replace('$', '')) : parseFloat(item.price.replace('$', ''));
 
           if (item.onSale == true) {
             saleWgit = `<div class="sale-wegit">Sale!</div>`;
@@ -106,7 +112,7 @@ function getCardataForStorePAge() {
           const cardHTML = `<div class="col-md-4 mb-4" id="card-col">
                         <div class="card border-0" style="background-color: #F9F9F9;">
                         ${saleWgit}
-                         <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                         <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${finalPrice}, image: "${item.image}"}, event)'><i class="fa-solid fa-bag-shopping"></i></div>
                          <div class="cart-text-div">Add to Cart</div>
                             <img src="${item.image}" class="card-img-top-2" alt="${item.name}">
                             <div class="card-body-2">
@@ -136,11 +142,13 @@ function getData_forPalntCollection_card() {
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById("our-plant-collection-row");
+      if (!container) return;
       container.innerHTML = "";
       data.forEach(item => {
         if (item.id > 3) {
           let saleWgit = ``;
-                    let priceHTML = ``;
+          let priceHTML = ``;
+          const finalPrice = item.onSale ? parseFloat(item.salePrice.replace('$', '')) : parseFloat(item.price.replace('$', ''));
 
           if (item.onSale == true) {
             saleWgit = `<div class="sale-wegit">Sale!</div>`;
@@ -157,7 +165,7 @@ function getData_forPalntCollection_card() {
           const cardHTML = `<div class="col-md-4 mb-4" id="card-col">
                         <div class="card border-0">
                         ${saleWgit}
-                         <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                         <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${finalPrice}, image: "${item.image}"}, event)'><i class="fa-solid fa-bag-shopping"></i></div>
                          <div class="cart-text-div">Add to Cart</div>
                             <img src="${item.image}" class="card-img-top-2" alt="${item.name}">
                             <div class="card-body-2" style="background-color: #F9F9F9;">
@@ -187,11 +195,14 @@ function getOnlyplant() {
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('plant-collection-row');
+      if (!container) return;
       container.innerHTML = '';
       data.forEach(item => {
         if (item.type === "Plants") {
           let onSalediv = ``;
           let priceHTML = ``;
+          const finalPrice = item.onSale ? parseFloat(item.salePrice.replace('$', '')) : parseFloat(item.price.replace('$', ''));
+          
           if (item.onSale === true) {
             onSalediv = `<div class="sale-wegit">Sale!</div>`;
             priceHTML = `<div class="price-oncard">
@@ -209,7 +220,7 @@ function getOnlyplant() {
                         <div class="images-con">
                          ${onSalediv}
                             <img style="height: 17rem;"  src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${finalPrice}, image: "${item.image}"})'><i class="fa-solid fa-bag-shopping"></i></div>
                             <div class="cart-text-div">Add to Cart</div>
                         </div>
                         <p class="type-of">${item.type}</p>
@@ -241,11 +252,14 @@ function getOnlyCactos() {
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('cactus-collection-row');
+      if (!container) return;
       container.innerHTML = '';
       data.forEach(item => {
         if (item.type === "Cactus") {
           let onSalediv = ``;
           let priceHTML = ``;
+          const finalPrice = item.onSale ? parseFloat(item.salePrice.replace('$', '')) : parseFloat(item.price.replace('$', ''));
+          
           if (item.onSale === true) {
             onSalediv = `<div class="sale-wegit">Sale!</div>`;
             priceHTML = `<div class="price-oncard">
@@ -263,7 +277,7 @@ function getOnlyCactos() {
                         <div class="images-con">
                          ${onSalediv}
                             <img style="height: 17rem;"  src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${finalPrice}, image: "${item.image}"})'><i class="fa-solid fa-bag-shopping"></i></div>
                             <div class="cart-text-div">Add to Cart</div>
                         </div>
                         <p class="type-of">${item.type}</p>

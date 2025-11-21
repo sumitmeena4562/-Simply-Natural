@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Simply Natural</title>
+
+    <link rel="icon" href="resource/plants-store-logo-green.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg px-5">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img id="web-name-logo-side" src="resource/plants-store-logo-green.svg" alt="Simply Natural Logo">
+                Simply Natural
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Store</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Plants</a></li>
+                            <li><a class="dropdown-item" href="#">Pots</a></li>
+                            <li><a class="dropdown-item" href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My Account</a></li>
+                </ul>
+
+                <div class="nav-icons">
+                    <span class="price">$0.00</span>
+                    <i style="color:#4CAF50;" class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="home-hero-container">
+        <h5>Best Quality Plants</h5>
+        <h1>Amazing Variety</h1>
+        <h1>Of Plants Starting</h1>
+        <h1>Just $6</h1>
+        <button class="hero-section-shop-now-btn">SHOP NOW</button>
+    </div>
+    
+    <div class="home-info-2nd-section">
+        <div class="row">
+            <div class="col d-flex text-center">
+                <div class="home-info-2nd-section-icon">
+                    <i style="font-size: 1.4rem;" class="fa-solid fa-spa"></i>
+                </div>
+                <div class="home-info-2nd-section-dec">
+                    <h5>Plants Collection</h5>
+                    <p>Any plants for your space</p>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="home-info-2nd-section-icon">
+                    <i style="font-size: 1.4rem;" class="fas fa-box"></i>
+                </div>
+                <div>
+                    <h5>Free Shipping</h5>
+                    <p>Free shipping on order</p>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="home-info-2nd-section-icon">
+                    <i style="font-size: 1.4rem;" class="fas fa-sync"></i>
+                </div>
+                <div>
+                    <h5>100% Money Back</h5>
+                    <p>If the item didn't suit you</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="shop-info-container">
+        <div class="row" id="shop-info-con-row-flex">
+        </div>
+    </div>
+    
+    <div id="featured-plants-section">
+        <h2>Featured Plants</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="featured-plants-section-card">
+            <div class="row" style="height: 95%;" id="featured-plants-section-card-row">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

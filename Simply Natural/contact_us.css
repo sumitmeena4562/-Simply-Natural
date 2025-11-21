@@ -95,3 +95,52 @@ body {
     color: black;
     font-size: 4rem;
 }
+
+#contact-details-section{
+    height: auto;
+    width: 100%;
+    padding: 104px 75.5px;
+}
+
+iframe {
+    pointer-events: auto;
+}
+
+#website-info-container {
+    height: 10%;
+    width: 90%;
+    padding: 7.699% 0%;
+}
+
+.logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon-wrape {
+    display: flex;
+    width: 45%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon-wrape i {
+    font-size: 15px;
+    background: #4E5768;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-wrp-row{
+    padding: 32px 64px;
+    font-size: 13px;
+    color: var(--text-color);
+}

@@ -1,0 +1,194 @@
+:root {
+    --text-color: #2b2f38c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: #f9f9f9;
+}
+
+.navbar {
+    background-color: white !important;
+    padding: 1rem 4rem;
+    color: var(--text-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.navbar-brand img {
+    width: 32px;
+    margin-right: 8px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 400;
+    color: var(--text-color) !important;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #5cb85c !important;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+#account-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+}
+
+.login-box,
+.register-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-control {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: #8DD348;
+    box-shadow: 0 0 0 0.2rem rgba(141, 211, 72, 0.25);
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #5d6167;
+}
+
+.btn-login,
+.btn-register {
+    background: #8DD348;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    background: #7bc239;
+    transform: translateY(-2px);
+}
+
+.lost-password {
+    display: block;
+    margin-top: 15px;
+    color: #8DD348;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.lost-password:hover {
+    text-decoration: underline;
+}
+
+.footer-section {
+    padding: 60px 0 0;
+    margin-top: 80px;
+}
+
+#row-foter {
+    margin: 0 5.552%;
+    padding-bottom: 40px;
+}
+
+.get-in-touch-sec-inner,
+.websideinfo,
+.quick-links-inner {
+    padding: 20px;
+}
+
+.footer-logo-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-wrape {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-wrape button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.icon-wrape button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.quick-links-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quick-links-inner span {
+    color: #2c3e50;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.quick-links-inner span:hover {
+    color: #4CAF50;
+}
+
+.copyright-section {
+    padding: 20px 0;
+    color: #2c3e50;
+}

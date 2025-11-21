@@ -12,9 +12,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="common.css">
+
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -40,13 +40,13 @@
                             aria-expanded="false">Store</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="store.html">All Products</a></li>
-                            <li><a class="dropdown-item" href="plants.html">Plants</a></li>
-                            <li><a class="dropdown-item" href="Cactos.html">Cactus</a></li>
+                            <li><a class="dropdown-item" href="store.html">Plants</a></li>
+                            <li><a class="dropdown-item" href="store.html">Cactus</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="my_account.html">My Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My Account</a></li>
                 </ul>
 
                 <div class="nav-icons">
@@ -490,28 +490,7 @@
     </footer>
 
 
-    <!-- Cart Modal -->
-    <div class="cart-overlay"></div>
-    <div class="cart-modal">
-        <div class="cart-header">
-            <h3>Shopping Cart</h3>
-            <span class="cart-close" onclick="closeCart()">&times;</span>
-        </div>
-        <div class="cart-body">
-            <div class="cart-empty">Your cart is empty</div>
-        </div>
-        <div class="cart-footer" style="display: none;">
-            <div class="cart-total">
-                <span>Subtotal:</span>
-                <span>$0.00</span>
-            </div>
-            <button class="view-cart-btn">VIEW CART</button>
-            <button class="cart-checkout">CHECKOUT</button>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="cart.js"></script>
     <script src="app.js"></script>
 </body>
 

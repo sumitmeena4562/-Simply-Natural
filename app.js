@@ -37,6 +37,8 @@ function getplantShopData() {
         if (item.category === "Featured Plants") {
           let onSalediv = ``;
           let priceHTML = ``;
+          const actualPrice = item.onSale ? parseFloat(item.salePrice.replace('$', '')) : parseFloat(item.price.replace('$', ''));
+          
           if (item.onSale === true) {
             onSalediv = `<div class="sale-wegit">Sale!</div>`;
             priceHTML = `<div class="price-oncard">
@@ -54,7 +56,7 @@ function getplantShopData() {
                         <div class="images-con">
                          ${onSalediv}
                             <img style="height: 17rem;"  src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${actualPrice}, image: "${item.image}"})'><i class="fa-solid fa-bag-shopping"></i></div>
                             <div class="cart-text-div">Add to Cart</div>
                         </div>
                         <p class="type-of">${item.type}</p>

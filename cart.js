@@ -27,9 +27,9 @@ function renderCartItems() {
                 <img src="${item.image}" class="cart-item-img" alt="${item.name}">
                 <div class="cart-item-details">
                     <div class="cart-item-name">${item.name}</div>
-                    <div class="cart-item-price">${item.quantity} x $${item.price}</div>
+                    <div class="cart-item-price">${item.quantity} × $${item.price.toFixed(2)}</div>
                 </div>
-                <i class="fa-solid fa-trash cart-item-remove" onclick="removeFromCart(${index})"></i>
+                <i class="fa-solid fa-circle-xmark cart-item-remove" onclick="removeFromCart(${index})"></i>
             </div>
         `).join('');
         

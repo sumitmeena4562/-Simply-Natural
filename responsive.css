@@ -1,0 +1,380 @@
+/* Responsive Design for All Devices */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet - 768px to 1023px */
+@media (max-width: 1023px) {
+    .navbar-collapse {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    
+    .home-hero-container {
+        height: 450px !important;
+        padding: 6rem 2rem 2rem 2rem !important;
+    }
+    
+    .home-info-2nd-section {
+        margin-top: 480px !important;
+        padding: 2rem 1rem !important;
+    }
+    
+    .home-info-2nd-section .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    #featured-plants-section-card-row .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .card {
+        width: 100% !important;
+        margin: 0 auto 20px !important;
+    }
+    
+    #about-us-summry .row,
+    #over-compny-section .row {
+        flex-direction: column;
+    }
+    
+    #about-us-summry .col-4,
+    #about-us-summry .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    #teammate .col-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 30px;
+    }
+    
+    #website-info-container .col-4,
+    #website-info-container .col-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+    
+    .Testimonials-section .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .help-section .col-4,
+    .help-section .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+/* Mobile - 768px and below */
+@media (max-width: 767px) {
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.2rem !important; }
+    
+    .navbar {
+        padding: 0.8rem !important;
+    }
+    
+    .home-hero-container {
+        height: 380px !important;
+        padding: 5rem 1.5rem 2rem 1.5rem !important;
+    }
+    
+    .home-info-2nd-section {
+        margin-top: 410px !important;
+        padding: 2rem 1rem !important;
+    }
+    
+    .home-info-2nd-section .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    #featured-plants-section {
+        padding: 2rem 1rem !important;
+    }
+    
+    #featured-plants-section-card-row .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .card {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto 20px !important;
+    }
+    
+    .card-img-top-2 {
+        height: 250px !important;
+        object-fit: cover;
+    }
+    
+    #about-us-summry,
+    #over-compny-section,
+    #over-team-section {
+        width: 100% !important;
+        padding: 40px 20px !important;
+    }
+    
+    #about-us-summry .col-4,
+    #about-us-summry .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    #teammate .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    #teammate img {
+        height: 200px;
+        width: 200px;
+    }
+    
+    #website-info-container {
+        width: 100% !important;
+        padding: 40px 20px !important;
+    }
+    
+    #website-info-container .row {
+        flex-direction: column;
+    }
+    
+    #website-info-container .col-4,
+    #website-info-container .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    #contact-details-section {
+        padding: 40px 20px !important;
+    }
+    
+    #contact-details-section .col-lg-8,
+    #contact-details-section .col-lg-4,
+    #contact-details-section .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .herosection {
+        height: 40vh !important;
+    }
+    
+    .image-overlay {
+        padding-top: 25% !important;
+    }
+    
+    .Testimonials-section {
+        height: auto !important;
+        padding: 2rem 0 !important;
+    }
+    
+    .Testimonials-section .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .sarah-jones-info,
+    .testimonial-info {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    
+    .sarah-jones-info-img,
+    .testimonial-img {
+        width: 100% !important;
+        height: 250px !important;
+    }
+    
+    .Need-help-in-choosing-the-right-plants-section {
+        min-height: 400px !important;
+    }
+    
+    .help-section .col-4,
+    .help-section .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .interested-section-containt {
+        width: 90% !important;
+        padding: 8% 5% !important;
+    }
+    
+    .footer-section {
+        height: auto !important;
+    }
+    
+    #row-foter {
+        flex-direction: column !important;
+        padding: 30px 20px !important;
+    }
+    
+    #row-foter > div {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Small Mobile - 425px and below */
+@media (max-width: 425px) {
+    h1 { font-size: 1.6rem !important; }
+    h2 { font-size: 1.4rem !important; }
+    h3 { font-size: 1.1rem !important; }
+    
+    .home-hero-container {
+        height: 350px !important;
+        padding: 5rem 1rem 2rem 1rem !important;
+    }
+    
+    .home-info-2nd-section {
+        margin-top: 380px !important;
+    }
+    
+    .card {
+        max-width: 300px !important;
+    }
+    
+    .card-img-top-2 {
+        height: 230px !important;
+    }
+    
+    #about-us-summry,
+    #over-compny-section,
+    #over-team-section {
+        padding: 30px 15px !important;
+    }
+    
+    #teammate img {
+        height: 180px;
+        width: 180px;
+    }
+    
+    #website-info-container {
+        padding: 30px 15px !important;
+    }
+    
+    #contact-details-section {
+        padding: 30px 15px !important;
+    }
+    
+    .herosection {
+        height: 38vh !important;
+    }
+    
+    .sarah-jones-info-img,
+    .testimonial-img {
+        height: 230px !important;
+    }
+    
+    .Need-help-in-choosing-the-right-plants-section {
+        min-height: 350px !important;
+    }
+    
+    #row-foter {
+        padding: 20px 15px !important;
+    }
+}
+
+/* Extra Small Mobile - 320px */
+@media (max-width: 374px) {
+    h1 { font-size: 1.4rem !important; }
+    h2 { font-size: 1.2rem !important; }
+    h3 { font-size: 1rem !important; }
+    
+    .navbar-brand {
+        font-size: 0.85rem !important;
+    }
+    
+    .home-hero-container {
+        height: 320px !important;
+        padding: 4.5rem 0.8rem 1.5rem 0.8rem !important;
+    }
+    
+    .home-info-2nd-section {
+        margin-top: 350px !important;
+        padding: 1.5rem 0.8rem !important;
+    }
+    
+    .card {
+        max-width: 280px !important;
+    }
+    
+    .card-img-top-2 {
+        height: 200px !important;
+    }
+    
+    #about-us-summry,
+    #over-compny-section,
+    #over-team-section {
+        padding: 25px 12px !important;
+    }
+    
+    #teammate img {
+        height: 160px;
+        width: 160px;
+    }
+    
+    #website-info-container {
+        padding: 25px 12px !important;
+    }
+    
+    #contact-details-section {
+        padding: 25px 12px !important;
+    }
+    
+    .herosection {
+        height: 35vh !important;
+    }
+    
+    .sarah-jones-info-img,
+    .testimonial-img {
+        height: 200px !important;
+    }
+    
+    .Need-help-in-choosing-the-right-plants-section {
+        min-height: 300px !important;
+    }
+    
+    #row-foter {
+        padding: 15px 10px !important;
+    }
+}

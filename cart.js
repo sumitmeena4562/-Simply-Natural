@@ -1,7 +1,5 @@
-// Cart functionality
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Update cart count and total
 function updateCart() {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -13,7 +11,6 @@ function updateCart() {
     renderCartItems();
 }
 
-// Render cart items
 function renderCartItems() {
     const cartBody = document.querySelector('.cart-body');
     
@@ -51,14 +48,12 @@ function addToCart(product, event) {
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCart();
     
-    // Bag animation
     const bagIcon = document.querySelector('.nav-icons .fa-bag-shopping');
     if (bagIcon) {
         bagIcon.classList.add('bag-bounce');
         setTimeout(() => bagIcon.classList.remove('bag-bounce'), 600);
     }
     
-    // Button animation
     if (event) {
         const btn = event.currentTarget || event;
         btn.classList.add('btn-added');
@@ -66,14 +61,12 @@ function addToCart(product, event) {
     }
 }
 
-// Remove from cart
 function removeFromCart(index) {
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCart();
 }
 
-// Toggle cart
 function toggleCart() {
     document.querySelector('.cart-modal').classList.toggle('active');
     document.querySelector('.cart-overlay').classList.toggle('active');
@@ -89,7 +82,6 @@ function closeCart() {
     document.querySelector('.cart-overlay').classList.remove('active');
 }
 
-// Initialize cart on page load
 document.addEventListener('DOMContentLoaded', function() {
     updateCart();
     

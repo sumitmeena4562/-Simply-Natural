@@ -1,7 +1,4 @@
-// Load cart items on page load
-document.addEventListener('DOMContentLoaded', function() {
-    loadCartPage();
-});
+document.addEventListener('DOMContentLoaded', loadCartPage);
 
 function loadCartPage() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -31,17 +28,17 @@ function loadCartPage() {
 }
 
 function removeFromCartPage(index) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     loadCartPage();
-    updateCart();
+    if (typeof updateCart === 'function') updateCart();
 }
 
 function updateQuantity(index, quantity) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart[index].quantity = parseInt(quantity);
     localStorage.setItem('cart', JSON.stringify(cart));
     loadCartPage();
-    updateCart();
+    if (typeof updateCart === 'function') updateCart();
 }

@@ -1,7 +1,6 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateCart() {
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     
     document.querySelectorAll('.price').forEach(el => {
@@ -35,7 +34,6 @@ function renderCartItems() {
     }
 }
 
-// Add to cart
 function addToCart(product, event) {
     const existingItem = cart.find(item => item.id === product.id);
     
@@ -72,11 +70,6 @@ function toggleCart() {
     document.querySelector('.cart-overlay').classList.toggle('active');
 }
 
-function openCart() {
-    document.querySelector('.cart-modal').classList.add('active');
-    document.querySelector('.cart-overlay').classList.add('active');
-}
-
 function closeCart() {
     document.querySelector('.cart-modal').classList.remove('active');
     document.querySelector('.cart-overlay').classList.remove('active');
@@ -96,8 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.cart-overlay')?.addEventListener('click', closeCart);
     
     document.querySelectorAll('.view-cart-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            window.location.href = 'cart.html';
-        });
+        btn.addEventListener('click', () => window.location.href = 'cart.html');
     });
 });

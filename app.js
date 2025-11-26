@@ -1,293 +1,236 @@
+// Helper function to create price HTML
+function createPriceHTML(item) {
+  if (item.onSale) {
+    return `<div class="price-oncard">
+              <span class="price-on-active-sale">${item.price}</span>
+              <span class="sale-price">${item.salePrice}</span>
+            </div>`;
+  }
+  return `<div class="price-oncard">
+            <span class="sale-price">${item.price}</span>
+          </div>`;
+}
+
+// Helper function to create sale badge
+function createSaleBadge(onSale) {
+  return onSale ? '<div class="sale-wegit">Sale!</div>' : '';
+}
+
+// Helper function to create star rating
+function createStarRating() {
+  return `<div class="star-rating-div">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>`;
+}
+
+// Home info cards
 function getShofinfoCartd() {
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('shop-info-con-row-flex');
-      container.innerHTML = '';
-
-      data.forEach(item => {
-        if (item.category === "home-info") {
-          const cardHTML = `
-      <div class="col">
-        <div class="card" style="width: 23rem; height: 36rem;">
-          <img src="${item.image}" class="card-img-top" alt="${item.name}">
-          <div class="card-body">
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">${item.desc}</p>
-            <a href="${item.link}" class="btn-card-2nd-section">${item.btn}</a>
-          </div>
-        </div>
-      </div>
-    `;
-          container.innerHTML += cardHTML;
-        }
-      });
+      if (!container) return;
+      
+      container.innerHTML = data
+        .filter(item => item.category === "home-info")
+        .map(item => `
+          <div class="col">
+            <div id="card-heig-bh" class="card" style="width: 23rem; height: 36rem;">
+              <img src="${item.image}" class="card-img-top" alt="${item.name}">
+              <div class="card-body">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text">${item.desc}</p>
+                <a href="${item.link}" class="btn-card-2nd-section">${item.btn}</a>
+              </div>
+            </div>
+          </div>`)
+        .join('');
     })
     .catch(error => console.error('Error loading data:', error));
 }
-getShofinfoCartd();
 
+// Featured plants section
 function getplantShopData() {
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('featured-plants-section-card-row');
-      container.innerHTML = '';
-      data.forEach(item => {
-        if (item.category === "Featured Plants") {
-          let onSalediv = ``;
-          let priceHTML = ``;
+      if (!container) return;
+      
+      container.innerHTML = data
+        .filter(item => item.category === "Featured Plants")
+        .map(item => {
           const actualPrice = item.onSale ? parseFloat(item.salePrice.replace('$', '')) : parseFloat(item.price.replace('$', ''));
-          
-          if (item.onSale === true) {
-            onSalediv = `<div class="sale-wegit">Sale!</div>`;
-            priceHTML = `<div class="price-oncard">
-                                <span class="price-on-active-sale">${item.price}</span>
-                                <span class="sale-price">${item.salePrice}</span>
-                            </div>`;
-          }
-          else {
-            priceHTML = `<div class="price-oncard">
-                                <span class="price-2">${item.price}</span>
-                            </div>`;
-          }
-          const cardHTML = `<div class="col-md-3">
-                    <div class="card" style="width: 17rem;" id="card-none-border">
-                        <div class="images-con">
-                         ${onSalediv}
-                            <img style="height: 17rem;"  src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${actualPrice}, image: "${item.image}"})'><i class="fa-solid fa-bag-shopping"></i></div>
-                            <div class="cart-text-div">Add to Cart</div>
-                        </div>
-                        <p class="type-of">${item.type}</p>
-                        <div class="card-body-2">
-                            <h5 class="card-title" id="card-title-2">${item.name}</h5>
-                             <div class="star-rating-div">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                             </div>
-                             ${priceHTML}
-
-                        </div>
-                    </div>
-                </div>`;
-          container.innerHTML += cardHTML;
-        }
-      });
+          return `
+            <div class="col-md-3">
+              <div class="card" style="width: 17rem;" id="card-none-border">
+                <div class="images-con">
+                  ${createSaleBadge(item.onSale)}
+                  <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
+                  <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${actualPrice}, image: "${item.image}"})'><i class="fa-solid fa-bag-shopping"></i></div>
+                  <div class="cart-text-div">Add to Cart</div>
+                </div>
+                <p class="type-of">${item.type}</p>
+                <div class="card-body-2">
+                  <h5 class="card-title" id="card-title-2">${item.name}</h5>
+                  ${createStarRating()}
+                  ${createPriceHTML(item)}
+                </div>
+              </div>
+            </div>`;
+        })
+        .join('');
     })
     .catch(error => console.error('Error loading data:', error));
 }
-getplantShopData();
 
+// Store page cards (items 4, 5, 6)
 function getCardataForStorePAge() {
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById("featured-plants-container-row");
-      container.innerHTML = "";
-      data.forEach(item => {
-        if (item.id === 4 || item.id === 5 || item.id === 6) {
-          let saleWgit = ``;
-          let priceHTML = ``;
-
-          if (item.onSale == true) {
-            saleWgit = `<div class="sale-wegit">Sale!</div>`;
-            priceHTML = `<div class="price-oncard">
-                                <span class="price-on-active-sale">${item.price}</span>
-                                <span class="sale-price">${item.salePrice}</span>
-                            </div>`;
-          }
-           else {
-            priceHTML = `<div class="price-oncard">
-                                <span class="sale-price">${item.price}</span>
-                            </div>`;
-          }
-          const cardHTML = `<div class="col-md-4 mb-4" id="card-col">
-                        <div class="card border-0" style="background-color: #F9F9F9;">
-                        ${saleWgit}
-                         <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
-                         <div class="cart-text-div">Add to Cart</div>
-                            <img src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-body-2">
-                            <p class="type-of mt-2">${item.type}</p>
-                                <h5 class="card-title">${item.name}</h5>
-                                <div class="star-rating-div">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                ${priceHTML}
-                            </div>
-                        </div>
-                    </div>`;
-          container.innerHTML += cardHTML;
-        }
-      })
+      if (!container) return;
+      
+      container.innerHTML = data
+        .filter(item => item.id === 4 || item.id === 5 || item.id === 6)
+        .map(item => `
+          <div class="col-md-4 mb-4" id="card-col">
+            <div class="card border-0" style="background-color: #F9F9F9;">
+              ${createSaleBadge(item.onSale)}
+              <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+              <div class="cart-text-div">Add to Cart</div>
+              <img src="${item.image}" class="card-img-top-2" alt="${item.name}">
+              <div class="card-body-2">
+                <p class="type-of mt-2">${item.type}</p>
+                <h5 class="card-title">${item.name}</h5>
+                ${createStarRating()}
+                ${createPriceHTML(item)}
+              </div>
+            </div>
+          </div>`)
+        .join('');
     })
+    .catch(error => console.error('Error loading data:', error));
 }
 
-getCardataForStorePAge();
-
+// Plant collection cards (items > 3)
 function getData_forPalntCollection_card() {
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById("our-plant-collection-row");
-      container.innerHTML = "";
-      data.forEach(item => {
-        if (item.id > 3) {
-          let saleWgit = ``;
-                    let priceHTML = ``;
-
-          if (item.onSale == true) {
-            saleWgit = `<div class="sale-wegit">Sale!</div>`;
-             priceHTML = `<div class="price-oncard">
-                                <span class="price-on-active-sale">${item.price}</span>
-                                <span class="sale-price">${item.salePrice}</span>
-                            </div>`;
-          }
-           else {
-            priceHTML = `<div class="price-oncard">
-                                <span class="sale-price">${item.price}</span>
-                            </div>`;
-          }
-          const cardHTML = `<div class="col-md-4 mb-4" id="card-col">
-                        <div class="card border-0">
-                        ${saleWgit}
-                         <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
-                         <div class="cart-text-div">Add to Cart</div>
-                            <img src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-body-2" style="background-color: #F9F9F9;">
-                            <p class="type-of mt-2">${item.type}</p>
-                                <h5 class="card-title">${item.name}</h5>
-                                <div class="star-rating-div">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                ${priceHTML}
-                            </div>
-                        </div>
-                    </div>`;
-          container.innerHTML += cardHTML;
-        }
-      })
+      if (!container) return;
+      
+      container.innerHTML = data
+        .filter(item => item.id > 3)
+        .map(item => `
+          <div class="col-md-4 mb-4" id="card-col">
+            <div class="card border-0">
+              ${createSaleBadge(item.onSale)}
+              <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+              <div class="cart-text-div">Add to Cart</div>
+              <img src="${item.image}" class="card-img-top-2" alt="${item.name}">
+              <div class="card-body-2" style="background-color: #F9F9F9;">
+                <p class="type-of mt-2">${item.type}</p>
+                <h5 class="card-title">${item.name}</h5>
+                ${createStarRating()}
+                ${createPriceHTML(item)}
+              </div>
+            </div>
+          </div>`)
+        .join('');
     })
+    .catch(error => console.error('Error loading data:', error));
 }
 
-getData_forPalntCollection_card();
-
+// Plants only
 function getOnlyplant() {
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('plant-collection-row');
-      container.innerHTML = '';
-      data.forEach(item => {
-        if (item.type === "Plants") {
-          let onSalediv = ``;
-          let priceHTML = ``;
-          if (item.onSale === true) {
-            onSalediv = `<div class="sale-wegit">Sale!</div>`;
-            priceHTML = `<div class="price-oncard">
-                                <span class="price-on-active-sale">${item.price}</span>
-                                <span class="sale-price">${item.salePrice}</span>
-                            </div>`;
-          }
-          else {
-            priceHTML = `<div class="price-oncard">
-                                <span class="price-2">${item.price}</span>
-                            </div>`;
-          }
-          const cardHTML = `<div class="col-md-3">
-                    <div class="card border-0" style="width: 17rem;" id="card-none-border">
-                        <div class="images-con">
-                         ${onSalediv}
-                            <img style="height: 17rem;"  src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
-                            <div class="cart-text-div">Add to Cart</div>
-                        </div>
-                        <p class="type-of">${item.type}</p>
-                        <div class="card-body-2">
-                            <h5 class="card-title" id="card-title-2">${item.name}</h5>
-                             <div class="star-rating-div">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                             </div>
-                             ${priceHTML}
-
-                        </div>
-                    </div>
-                </div>`;
-          container.innerHTML += cardHTML;
-        }
-      });
+      if (!container) return;
+      
+      container.innerHTML = data
+        .filter(item => item.type === "Plants")
+        .map(item => `
+          <div class="col-md-3">
+            <div class="card border-0" style="width: 17rem;" id="card-none-border">
+              <div class="images-con">
+                ${createSaleBadge(item.onSale)}
+                <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
+                <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="cart-text-div">Add to Cart</div>
+              </div>
+              <p class="type-of">${item.type}</p>
+              <div class="card-body-2">
+                <h5 class="card-title" id="card-title-2">${item.name}</h5>
+                ${createStarRating()}
+                ${createPriceHTML(item)}
+              </div>
+            </div>
+          </div>`)
+        .join('');
     })
     .catch(error => console.error('Error loading data:', error));
 }
 
-getOnlyplant();
-
+// Cactus only
 function getOnlyCactos() {
   fetch("data.json")
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('cactus-collection-row');
-      container.innerHTML = '';
-      data.forEach(item => {
-        if (item.type === "Cactus") {
-          let onSalediv = ``;
-          let priceHTML = ``;
-          if (item.onSale === true) {
-            onSalediv = `<div class="sale-wegit">Sale!</div>`;
-            priceHTML = `<div class="price-oncard">
-                                <span class="price-on-active-sale">${item.price}</span>
-                                <span class="sale-price">${item.salePrice}</span>
-                            </div>`;
-          }
-          else {
-            priceHTML = `<div class="price-oncard">
-                                <span class="price-2">${item.price}</span>
-                            </div>`;
-          }
-          const cardHTML = `<div class="col-md-3">
-                    <div class="card border-0" style="width: 17rem;" id="card-none-border">
-                        <div class="images-con">
-                         ${onSalediv}
-                            <img style="height: 17rem;"  src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                            <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
-                            <div class="cart-text-div">Add to Cart</div>
-                        </div>
-                        <p class="type-of">${item.type}</p>
-                        <div class="card-body-2">
-                            <h5 class="card-title" id="card-title-2">${item.name}</h5>
-                             <div class="star-rating-div">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                             </div>
-                             ${priceHTML}
-
-                        </div>
-                    </div>
-                </div>`;
-          container.innerHTML += cardHTML;
-        }
-      });
+      if (!container) return;
+      
+      container.innerHTML = data
+        .filter(item => item.type === "Cactus")
+        .map(item => `
+          <div class="col-md-3">
+            <div class="card border-0" style="width: 17rem;" id="card-none-border">
+              <div class="images-con">
+                ${createSaleBadge(item.onSale)}
+                <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
+                <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="cart-text-div">Add to Cart</div>
+              </div>
+              <p class="type-of">${item.type}</p>
+              <div class="card-body-2">
+                <h5 class="card-title" id="card-title-2">${item.name}</h5>
+                ${createStarRating()}
+                ${createPriceHTML(item)}
+              </div>
+            </div>
+          </div>`)
+        .join('');
     })
     .catch(error => console.error('Error loading data:', error));
 }
 
+// Initialize all functions
+getShofinfoCartd();
+getplantShopData();
+getCardataForStorePAge();
+getData_forPalntCollection_card();
+getOnlyplant();
 getOnlyCactos();
+
+// Active page navigation
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+});

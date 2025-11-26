@@ -6,11 +6,14 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
     background-color: transparent !important;
     padding-left: 55.500px;
+    position: relative;
+    z-index: 10;
 }
 
 .navbar-brand {
@@ -202,7 +205,8 @@ body {
 
 .featured-plants-section-card {
     height: 75.679%;
-    width: 85.2%;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .card-body-2 {
@@ -273,9 +277,6 @@ body {
     font-weight: 800;
 }
 
-
-
-
 .images-con {
     position: relative;
     overflow: hidden;
@@ -331,13 +332,12 @@ body {
     left: 4%;
     position: absolute;
     background: white;
-    height: 10.7%;
-    width: 19.5%;
-    padding: 2% 4%;
-    font-size: 80%;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.75rem;
+    font-weight: 500;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-
+    white-space: nowrap;
 }
 
 .price-on-active-sale {
@@ -445,6 +445,7 @@ body {
 .sarah-jones-info-img {
     height: 100%;
     width: 40.8%;
+    max-width: 300px;
     border-radius: 5%;
 }
 
@@ -483,6 +484,7 @@ body {
 .testimonial-img {
     height: 100%;
     width: 39.1%;
+    max-width: 280px;
 }
 
 .jessica-foxx-description {
@@ -557,8 +559,6 @@ body {
     width: 21.9999%;
 }
 
-.websiteinfo {}
-
 #get-in-touch-se {
     width: 31.333333% !important;
 }
@@ -619,7 +619,7 @@ body {
     margin-left: 4%;
     margin-right: 4%;
     margin-bottom: 0%;
-    padding: 8% 1%
+    padding: 8% 1%;
 }
 
 @media (max-width: 768px) {
@@ -676,6 +676,9 @@ body {
         margin-bottom: 2rem;
     }
 
+     #card-heig-bh{
+        height: 29rem !important;
+    }
     #featured-plants-section {
         height: auto;
         padding: 3rem 1rem;
@@ -687,7 +690,7 @@ body {
 
     .col-md-3 {
         flex: 0 0 50%;
-        max-width: 50%;
+        max-width: 33%;
     }
 
 }
@@ -735,6 +738,23 @@ body {
         padding: 2rem 1rem;
     }
 
+    .Need-help-in-choosing-the-right-plants-section p{
+        width: 100%;
+                font-size: 0.8rem;
+                height: 30vh;
+    }
+    .Need-help-in-choosing-the-right-plants-section-cover{
+        height: 75vh;
+    }
+    .interested-section-containt-h2{
+        width: 200px;
+        font-size: 1rem;
+    }
+
+    .interested-section-containt-p{
+        width: 270px;
+        font-size: .6rem;
+    }
     .home-info-2nd-section-icon {
         width: 50px;
         height: 50px;
@@ -750,11 +770,11 @@ body {
 
     .hero-section-shop-now-btn {
         padding: 3% 8%;
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 
     .card {
-        width: 100% !important;
+        width: 80% !important;
         max-width: 300px;
         margin: 0 auto 1.5rem;
     }

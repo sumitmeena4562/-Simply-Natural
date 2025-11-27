@@ -70,6 +70,7 @@ body {
     .home-hero-container h5 {
         font-size: 0.85rem !important;
     }
+    
     #card-heig-bh{
         height: 32rem !important;
     }
@@ -128,7 +129,7 @@ body {
     }
 
     .home-hero-container h1 {
-    font-size: 325% !important;
+    font-size: 200% !important;
 }
 }
 

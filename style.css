@@ -698,19 +698,20 @@ body {
 @media (max-width: 576px) {
     .navbar {
         padding-left: 10px;
+        padding-right: 10px;
     }
 
     .navbar-brand {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .navbar-brand img {
-        width: 20px;
+        width: 24px;
     }
 
     .nav-icons {
-        margin-left: 5px;
-        gap: 5px;
+        margin-left: 8px;
+        gap: 8px;
     }
 
     .price {
@@ -719,63 +720,12 @@ body {
 
     .cart-icon,
     .user-icon {
-        font-size: 1rem;
-    }
-
-    .home-hero-container {
-        height: 300px;
-        border-radius: 0rem 0rem 2rem 2rem;
-        padding-left: 5rem;
-        padding-right: 17rem;
-    }
-
-    .Home-info-section {
-        margin-top: 330px;
-    }
-
-    .home-info-2nd-section {
-        margin-top: 330px;
-        padding: 2rem 1rem;
-    }
-
-    .Need-help-in-choosing-the-right-plants-section p{
-        width: 100%;
-                font-size: 0.8rem;
-                height: 30vh;
-    }
-    .Need-help-in-choosing-the-right-plants-section-cover{
-        height: 75vh;
-    }
-    .interested-section-containt-h2{
-        width: 200px;
-        font-size: 1rem;
-    }
-
-    .interested-section-containt-p{
-        width: 270px;
-        font-size: .6rem;
-    }
-    .home-info-2nd-section-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .home-hero-container h5 {
-        font-size: 1rem;
-    }
-
-    .home-hero-container h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-section-shop-now-btn {
-        padding: 3% 8%;
-        font-size: 0.5rem;
+        font-size: 1.1rem;
     }
 
     .card {
-        width: 80% !important;
-        max-width: 300px;
+        width: 100% !important;
+        max-width: 320px;
         margin: 0 auto 1.5rem;
     }
 
@@ -790,11 +740,17 @@ body {
 
     #featured-plants-section {
         height: auto;
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
 
     #featured-plants-section h2 {
         font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #featured-plants-section p {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
     }
 
     .featured-plants-section-card {
@@ -809,7 +765,12 @@ body {
 
     #card-none-border {
         width: 100% !important;
-        max-width: 280px;
+        max-width: 300px;
         margin: 0 auto 1rem;
+    }
+    
+    .card-img-top-2 {
+        height: 250px !important;
+        object-fit: cover;
     }
 }

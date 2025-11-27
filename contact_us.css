@@ -79,7 +79,7 @@ body {
     background-size: cover;
     background-position: center;
     padding: 0% 0%;
-    border-radius: 5rem;
+    border-radius: 0rem  0rem 5rem 5rem;
 }
 
 .image-overlay {
@@ -121,9 +121,16 @@ iframe {
 
 .icon-wrape {
     display: flex;
-    width: 45%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon-wrape button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
 }
 
 .icon-wrape i {
@@ -137,10 +144,122 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.3s;
+}
+
+.icon-wrape button:hover i {
+    background: #8DD348;
 }
 
 #footer-wrp-row{
     padding: 32px 64px;
     font-size: 13px;
     color: var(--text-color);
+}
+
+/* Bootstrap Responsive Breakpoints */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    
+    .image-overlay h1 {
+        font-size: 3rem;
+    }
+    
+    .image-overlay {
+        font-size: 2rem;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 767.98px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .herosection {
+        height: 50vh;
+        border-radius: 0 0 3rem 3rem;
+    }
+    
+    .image-overlay {
+        padding-top: 15%;
+        padding-left: 5%;
+        font-size: 1.5rem;
+    }
+    
+    .image-overlay h1 {
+        font-size: 2rem;
+    }
+    
+    #contact-details-section {
+        padding: 50px 30px;
+    }
+}
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-brand img {
+        width: 24px;
+    }
+    
+    .herosection {
+        height: 40vh;
+        border-radius: 0 0 2rem 2rem;
+    }
+    
+    .image-overlay {
+        padding-top: 20%;
+        padding-left: 5%;
+        font-size: 1.2rem;
+    }
+    
+    .image-overlay h1 {
+        font-size: 1.5rem;
+    }
+    
+    #contact-details-section {
+        padding: 30px 15px;
+    }
+    
+    #footer-wrp-row {
+        padding: 20px 15px;
+    }
+    
+    .icon-wrape {
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .icon-wrape i {
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+    }
+    
+    #row-foter {
+        text-align: center;
+    }
+    
+    .get-in-touch-sec-inner,
+    .quick-links-inner {
+        margin-bottom: 30px;
+    }
+    
+    .quick-links-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }

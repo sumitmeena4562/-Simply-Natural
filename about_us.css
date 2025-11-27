@@ -275,3 +275,123 @@ hr.solid {
     margin-bottom: 0%;
     padding: 8% 1%;
 }
+
+@media (max-width: 767.98px) {
+    .herosection {
+        height: 50vh;
+    }
+    
+    .image-overlay {
+        padding-top: 20%;
+        padding-left: 5%;
+    }
+    
+    .image-overlay h1 {
+        font-size: 2.5rem;
+    }
+    
+    #about-us-summry,
+    #over-compny-section,
+    #over-team-section {
+        width: 95%;
+        padding: 50px 15px;
+        margin: 0 auto;
+    }
+    
+    #teammate img {
+        height: 250px;
+        width: 250px;
+    }
+    
+    .interested-section-containt {
+        width: 85%;
+        margin: 0 7.5%;
+    }
+    
+    .footer-section {
+        height: auto;
+    }
+    
+    #row-foter {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .herosection {
+        height: 40vh;
+    }
+    
+    .image-overlay {
+        padding-top: 25%;
+        padding-left: 8%;
+    }
+    
+    .image-overlay h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand img {
+        width: 22px;
+    }
+    
+    #about-us-summry,
+    #over-compny-section,
+    #over-team-section {
+        width: 100%;
+        padding: 30px 15px;
+        margin: 0;
+    }
+    
+    #about-us-summry h1 {
+        font-size: 1.5rem;
+        word-wrap: break-word;
+    }
+    
+    #teammate {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    #teammate img {
+        height: 200px;
+        width: 200px;
+    }
+    
+    #read-more-btn {
+        padding: 15px 25px;
+        font-size: 11px;
+    }
+    
+    .icon-wrape {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .interested-section-containt {
+        width: 90%;
+        margin: 0 5%;
+        padding: 3rem 1rem;
+    }
+    
+    .interested-section-containt-h2 {
+        font-size: 1.3rem;
+    }
+    
+    .interested-section-containt-p {
+        font-size: 0.8rem;
+    }
+    
+    #row-foter {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+}

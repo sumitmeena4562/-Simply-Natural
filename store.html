@@ -139,10 +139,10 @@
     <div class="featured-plants-container">
         <div style="margin: 0% 5.552%; padding: 7.699% 0% 5.922%; width: 90%;" class="container-fluid">
             <div class="featured-plants-container-inner">
-                <div class="row  mb-4" id="featured-plants-container-heading-row">
+                <div class="row  mb-4 sm-1" id="featured-plants-container-heading-row">
                     <h1>Featured Plants</h1>
                 </div>
-                <div class="row" id="featured-plants-container-row">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="featured-plants-container-row">
 
 
 
@@ -156,8 +156,8 @@
                     <div class="row  mb-4" id="featured-plants-container-heading-row">
                         <h1>Our Plants Collection</h1>
                     </div>
-                    <div class="row" id="our-plant-collection-row">
-                        <div class="col-md-4 mb-4" id="card-col-collection">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="our-plant-collection-row">
+                        <div class="col">
                             <div class="card border-0">
                                 <div class="sale-wegit">Sale!</div>
                                 <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
@@ -179,7 +179,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4" id="card-col">
+                        <div class="col">
                             <div class="card border-0">
                                 <img src="resource/plant3-free-img.jpg" class="card-img-top-2"
                                     alt="Boncellensis Secullant">
@@ -197,7 +197,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4" id="card-col">
+                        <div class="col">
                             <div class="card border-0">
                                 <img src="resource/plant3-free-img.jpg" class="card-img-top-2"
                                     alt="Boncellensis Secullant">
@@ -224,45 +224,61 @@
         <div class="help-section">
             <div class="container-fluid" id="help-section-e-con">
                 <div class="row">
-                    <div class="col-4">
+
+                    <!-- Left Side -->
+                    <div class="col-12 col-md-4">
                         <div class="row">
                             <h2 style="font-size: 1.5rem; padding: 0% 4%;">Need help in choosing the right plants?</h2>
                         </div>
                         <div class="row d-flex align-items-end" style="height: auto;">
-                            <button id="help-section-e-con-btn"> <i class="fa-solid fa-phone fa-flip-horizontal"></i>
-                                Ask For Help</button>
+                            <button id="help-section-e-con-btn">
+                                <i class="fa-solid fa-phone fa-flip-horizontal"></i>
+                                Ask For Help
+                            </button>
                         </div>
                     </div>
-                    <div class="col-8">
+
+                    <!-- Right Side -->
+                    <div class="col-12 col-md-8">
                         <div class="row">
-                            <p style="font-size: 15px;">Commodo sociosqu venenatis cras dolor sagittis integer luctus
-                                sem primis eget maecenas
-                                sedurna malesuada consectetuer.</p>
+                            <p style="font-size: 15px;">
+                                Commodo sociosqu venenatis cras dolor sagittis integer luctus sem primis eget maecenas
+                                sedurna malesuada consectetuer.
+                            </p>
                         </div>
                         <div class="row">
-                            <p style="font-size: 15px;">Ornare integer commodo mauris et ligula purus, praesent cubilia
-                                laboriosam viverra. Mattis id
-                                rhoncus. Integer lacus eu volutpat fusce. Elit etiam phasellus suscipit suscipit
-                                dapibus,
-                                condimentum tempor quis, turpis luctus dolor sapien vivamus.</p>
+                            <p style="font-size: 15px;">
+                                Ornare integer commodo mauris et ligula purus, praesent cubilia laboriosam viverra.
+                                Mattis id rhoncus. Integer lacus eu volutpat fusce. Elit etiam phasellus suscipit
+                                suscipit dapibus, condimentum tempor quis, turpis luctus dolor sapien vivamus.
+                            </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
+
         <div class="container-fluid" id="website-info-container">
             <div class="row" style="height: auto; padding: 2.5% 0.8%;">
-                <div class="col-4">
-                    <h4 style="    font-size: 20px; margin: revert; margin-top: 0;">Get In Touch With Us For The Best Quality Plants & Succulents</h4>
-                    <p style="font-size: 14px; line-height: 25px;">Qui dolore ipsum quia dolor sit amet,consec tetur adipisci velit, sed
-                        quia non numquam eius modi tempora incidunt lores ta porro ame.</p>
 
+                <!-- Column 1 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h4 style="font-size: 20px; margin: 0;">Get In Touch With Us For The Best
+                        Quality Plants & Succulents</h4>
+                    <p style="font-size: 14px; line-height: 25px;">
+                        Qui dolore ipsum quia dolor sit amet,consec tetur adipisci velit, sed quia non numquam eius modi
+                        tempora incidunt lores ta porro ame.
+                    </p>
                 </div>
-                <div class="col-4 ">
+
+                <!-- Column 2 (Logo Center Card) -->
+                <div class="col-12 col-md-4 text-center mb-4">
                     <div class="logo-wrap">
-                        <img style="width: 25.69%;" src="resource/plants-store-logo-green.svg" alt="">
+                        <img style="width: 25%;" src="resource/plants-store-logo-green.svg" alt="">
                         <h2>Simply Natural</h2>
-                        <div class="icon-wrape" style="display: flex;">
+
+                        <div class="icon-wrape" style="display: flex; justify-content: center; gap: 15px;">
                             <i class="fa-brands fa-instagram"></i>
                             <i class="fa-brands fa-twitter"></i>
                             <i class="fa-brands fa-linkedin-in"></i>
@@ -270,18 +286,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-2">
+
+                <!-- Column 3 -->
+                <div class="col-12 col-md-2 mb-4">
                     <h4>Quick Links</h4>
-                    <span>Introduction</span>
-                    <span>Know more About Us</span>
-                    <span>Visit Store</span>
+                    <span>Introduction</span><br>
+                    <span>Know more About Us</span><br>
+                    <span>Visit Store</span><br>
                     <span>Let's Connect</span>
                 </div>
-                <div class="col-2">
+
+                <!-- Column 4 -->
+                <div class="col-12 col-md-2 mb-4">
                     <h4>Important Links</h4>
-                    <span>Privacy Policy</span>
-                    <span>Shipping Details</span>
-                    <span>Terms & Conditions</span>
+                    <span>Privacy Policy</span><br>
+                    <span>Shipping Details</span><br>
+                    <span>Terms & Conditions</span><br>
                     <span>Media Kit</span>
                 </div>
 
@@ -291,18 +311,14 @@
         <footer>
             <div class="container-fluid" id="footer-wrp-con">
                 <div class="row" id="footer-wrp-row">
-                    <div class="col">
+                    <div class="col-12 col-md-6">
                         <span>Copyright © 2025 Simply Natural</span>
                     </div>
-                    <div class="col d-flex justify-content-end">
-                        <span>Powered by Simply Natural</span>
-                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-md-end mt-2 mt-md-0">
 
-                </div>
-            </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="app.js"></script>
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+                        <script src="app.js"></script>
 </body>
 
 </html>

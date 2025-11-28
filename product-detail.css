@@ -1,152 +1,172 @@
 .product-detail-section {
-    padding: 80px 0;
-    min-height: 70vh;
-    background-color: #F9F9F9;
+    padding: 60px 0;
+    background: #fafafa;
 }
 
 .product-image-container {
     position: relative;
-    background: #f5f5f5;
-    border-radius: 10px;
-    padding: 40px;
+    background: #e8e8e8;
+    border-radius: 0;
+    padding: 60px;
     text-align: center;
 }
 
 .product-image-container img {
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     height: auto;
     object-fit: contain;
 }
 
 .zoom-icon {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     background: white;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 18px;
+    color: #666;
 }
 
 .product-info {
-    padding: 20px 40px;
+    padding: 0 60px;
 }
 
 .product-category {
-    color: #8DD348;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    text-transform: capitalize;
 }
 
 .product-title {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2.8rem;
+    font-weight: 400;
     color: #2c3e50;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    line-height: 1.2;
 }
 
 .product-price {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 400;
     color: #2c3e50;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .free-shipping {
-    font-size: 14px;
-    color: #666;
+    font-size: 13px;
+    color: #999;
     font-weight: 400;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 
 .product-description {
-    color: #666;
-    line-height: 1.8;
-    margin: 30px 0;
-    font-size: 15px;
+    color: #777;
+    line-height: 1.9;
+    margin: 35px 0;
+    font-size: 14px;
 }
 
 .product-actions {
     display: flex;
-    gap: 15px;
-    margin: 30px 0;
+    gap: 12px;
+    margin: 35px 0;
 }
 
 .quantity-input {
-    width: 80px;
-    padding: 15px;
+    width: 70px;
+    padding: 18px 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .add-to-cart-btn {
     flex: 1;
-    padding: 15px 40px;
+    padding: 18px 45px;
     background: #8DD348;
     color: white;
     border: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 2px;
     cursor: pointer;
     transition: all 0.3s;
+    text-transform: uppercase;
 }
 
 .add-to-cart-btn:hover {
     background: #7bc239;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(141, 211, 72, 0.3);
 }
 
 .product-meta {
     color: #666;
-    font-size: 14px;
-    margin: 20px 0;
+    font-size: 13px;
+    margin: 25px 0;
 }
 
 .product-meta span {
     color: #2c3e50;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .guaranteed-checkout {
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid #eee;
+    margin-top: 40px;
+    padding-top: 35px;
+    border-top: 1px solid #e0e0e0;
 }
 
 .guaranteed-checkout p {
-    font-size: 14px;
+    font-size: 13px;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    text-align: center;
 }
 
 .payment-icons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .payment-icons i {
-    font-size: 32px;
-    color: #666;
+    font-size: 38px;
+    color: #555;
+}
+
+@media (max-width: 991px) {
+    .product-info {
+        padding: 40px 20px;
+    }
+    
+    .product-image-container {
+        padding: 40px;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 768px) {
     .product-info {
-        padding: 20px 0;
+        padding: 20px;
     }
     
     .product-title {
+        font-size: 2rem;
+    }
+    
+    .product-price {
         font-size: 1.8rem;
     }
     
@@ -156,5 +176,9 @@
     
     .quantity-input {
         width: 100%;
+    }
+    
+    .product-image-container {
+        padding: 30px;
     }
 }

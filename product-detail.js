@@ -5,7 +5,6 @@ if (!productId) {
     window.location.href = 'index.html';
 }
 
-// Load product details
 fetch('data.json')
     .then(res => res.json())
     .then(data => {
@@ -16,6 +15,7 @@ fetch('data.json')
             document.getElementById('product-title').textContent = product.name;
             document.getElementById('product-meta-category').textContent = product.type;
             document.getElementById('product-description').textContent = product.description || 'No description available.';
+            document.getElementById('full-description').textContent = product.description || 'No description available.';
             
             const priceElement = document.getElementById('product-price');
             if (product.onSale) {
@@ -24,7 +24,6 @@ fetch('data.json')
                 priceElement.textContent = product.price;
             }
             
-            // Add to cart functionality
             document.getElementById('add-to-cart-btn').addEventListener('click', function() {
                 const quantity = parseInt(document.getElementById('quantity-input').value);
                 const price = product.onSale ? parseFloat(product.salePrice.replace('$', '')) : parseFloat(product.price.replace('$', ''));
@@ -38,5 +37,25 @@ fetch('data.json')
                     });
                 }
             });
+            
+            // Load related products (same type, different id)
+            const relatedProducts = data.filter(item => item.type === product.type && item.id !== productId).slice(0, 4);
+            const container = document.getElementById('related-products-row');
+            
+            container.innerHTML = relatedProducts.map(item => `
+                <div class="col-md-3">
+                    <div class="card border-0" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
+                        <div class="position-relative">
+                            ${item.onSale ? '<span class="badge bg-white text-dark position-absolute top-0 start-0 m-2">Sale!</span>' : ''}
+                            <img src="${item.image}" class="card-img-top" alt="${item.name}">
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted small">${item.type}</p>
+                            <h6>${item.name}</h6>
+                            <p class="fw-bold">${item.onSale ? `<span class="text-decoration-line-through text-muted">${item.price}</span> ${item.salePrice}` : item.price}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
         }
     });

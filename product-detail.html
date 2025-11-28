@@ -54,12 +54,12 @@
 </nav>
 
 
-    <div class="product-detail-section">
+    <div class="product-detail-section" style="background-color: #F9F9F9;">
     <div class="container py-5">
-    <div class="row g-5" style="background-color: #F9F9F9;">
+    <div class="row g-5" style="background-color: white;">
 
         <div class="col-md-6">
-            <div class="border rounded p-3 text-center">
+            <div class=" p-3 text-center">
                 <img id="product-main-image" src="" class="img-fluid rounded" alt="Product Image">
             </div>
         </div>
@@ -99,6 +99,34 @@
 
     </div>
 </div>
+
+<div class="container py-5">
+    <ul class="nav nav-tabs border-bottom mb-4">
+        <li class="nav-item">
+            <a class="nav-link active" id="description-tab" data-bs-toggle="tab" href="#description">Description</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="reviews-tab" data-bs-toggle="tab" href="#reviews">Reviews (0)</a>
+        </li>
+    </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="description">
+            <p class="text-muted" id="full-description">
+                Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet.
+            </p>
+        </div>
+        <div class="tab-pane fade" id="reviews">
+            <p class="text-muted">No reviews yet.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <h2 class="mb-4">Related products</h2>
+    <div class="row g-4" id="related-products-row"></div>
+</div>
+
 <footer class="bg-light pt-5">
     <div class="container">
         <div class="row g-4">

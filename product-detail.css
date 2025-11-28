@@ -146,6 +146,32 @@
     color: #555;
 }
 
+.nav-tabs {
+    border-bottom: 2px solid #ddd;
+}
+
+.nav-tabs .nav-link {
+    color: #666;
+    font-weight: 500;
+    border: none;
+    padding: 12px 24px;
+}
+
+.nav-tabs .nav-link.active {
+    color: #2c3e50;
+    border-bottom: 3px solid #2c3e50;
+    background: transparent;
+}
+
+#related-products-row .card {
+    transition: transform 0.3s;
+}
+
+#related-products-row .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 991px) {
     .product-info {
         padding: 40px 20px;

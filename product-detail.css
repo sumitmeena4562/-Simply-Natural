@@ -3,6 +3,12 @@
     background: #fafafa;
 }
 
+.colorbg {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 .product-image-container {
     position: relative;
     background: #e8e8e8;
@@ -161,6 +167,26 @@
     color: #2c3e50;
     border-bottom: 3px solid #2c3e50;
     background: transparent;
+}
+
+.review-form {
+    max-width: 800px;
+}
+
+.star-rating-input {
+    display: flex;
+    gap: 5px;
+}
+
+.star-rating-input i {
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.star-rating-input i:hover,
+.star-rating-input i.active {
+    color: #ffc107;
 }
 
 #related-products-row .card {

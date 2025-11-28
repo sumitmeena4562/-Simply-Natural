@@ -91,4 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.view-cart-btn').forEach(btn => {
         btn.addEventListener('click', () => window.location.href = 'cart.html');
     });
+    
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.classList.remove('active');
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || 
+            (currentPage === 'store.html' && linkPage === 'store.html') ||
+            (currentPage === 'plants.html' && linkPage === 'store.html') ||
+            (currentPage === 'Cactos.html' && linkPage === 'store.html')) {
+            link.classList.add('active');
+        }
+    });
 });

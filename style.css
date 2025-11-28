@@ -186,6 +186,7 @@ body {
 #featured-plants-section {
     height: auto;
     width: 100%;
+    padding: 5%;
     display: flex;
     text-align: center;
     justify-content: center;

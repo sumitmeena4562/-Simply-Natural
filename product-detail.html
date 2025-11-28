@@ -13,146 +13,143 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg px-5">
-        <div class="container-fluid px-3">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="resource/plants-store-logo-green.svg" alt="Simply Natural Logo">
-                Simply Natural
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="store.html" role="button" data-bs-toggle="dropdown">Store</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="store.html">All Products</a></li>
-                            <li><a class="dropdown-item" href="plants.html">Plants</a></li>
-                            <li><a class="dropdown-item" href="Cactos.html">Cactus</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="my_account.html">My Account</a></li>
-                </ul>
-                <div class="nav-icons">
-                    <span class="price">$0.00</span>
-                    <i style="color:#4CAF50;" class="fa-solid fa-bag-shopping"></i>
-                    <i class="fa-solid fa-user"></i>
-                </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 px-4">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="resource/plants-store-logo-green.svg" class="me-2" height="40">
+            <span class="fw-bold">Simply Natural</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="storeDropdown" role="button"
+                        data-bs-toggle="dropdown">Store</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="store.html">All Products</a></li>
+                        <li><a class="dropdown-item" href="plants.html">Plants</a></li>
+                        <li><a class="dropdown-item" href="Cactos.html">Cactus</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="my_account.html">My Account</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center ms-3">
+                <span class="me-3 fw-semibold">$0.00</span>
+                <i class="fa-solid fa-bag-shopping me-3" style="color:#4CAF50;font-size:20px;"></i>
+                <i class="fa-solid fa-user" style="font-size:20px;"></i>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <div class="product-detail-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="product-image-container">
-                        <i class="fa-solid fa-magnifying-glass zoom-icon"></i>
-                        <img id="product-main-image" src="" alt="Product Image">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="product-info">
-                        <p class="product-category" id="product-category">Plants</p>
-                        <h1 class="product-title" id="product-title">Boncellensis Secullant</h1>
-                        <div class="product-price">
-                            <span id="product-price">$34.00</span>
-                            <span class="free-shipping">+ Free Shipping</span>
-                        </div>
-                        <p class="product-description" id="product-description">
-                            Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, 
-                            sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, 
-                            qui dolore ipsum quia dolor sit amet.
-                        </p>
-                        <div class="product-actions">
-                            <input type="number" value="1" min="1" class="quantity-input" id="quantity-input">
-                            <button class="add-to-cart-btn" id="add-to-cart-btn">ADD TO CART</button>
-                        </div>
-                        <p class="product-meta">Category: <span id="product-meta-category">Plants</span></p>
-                        <div class="guaranteed-checkout">
-                            <p>Guaranteed Safe Checkout</p>
-                            <div class="payment-icons">
-                                <i class="fa-brands fa-cc-visa"></i>
-                                <i class="fa-brands fa-cc-mastercard"></i>
-                                <i class="fa-brands fa-cc-amex"></i>
-                                <i class="fa-brands fa-cc-discover"></i>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container py-5">
+    <div class="row g-5" style="background-color: #F9F9F9;">
+
+        <div class="col-md-6">
+            <div class="border rounded p-3 text-center">
+                <img id="product-main-image" src="" class="img-fluid rounded" alt="Product Image">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <p id="product-category" class="text-success fw-semibold">Plants</p>
+            <h1 id="product-title" class="fw-bold mb-3">Boncellensis Secullant</h1>
+
+            <div class="d-flex align-items-center mb-3">
+                <h3 id="product-price" class="text-dark me-3">$34.00</h3>
+                <span class="text-success fw-semibold">+ Free Shipping</span>
+            </div>
+
+            <p id="product-description" class="text-muted mb-4">
+                Neque porro quisquam est, qui dolore ipsum quia dolor sit amet...
+            </p>
+
+            <div class="d-flex align-items-center gap-3 mb-4">
+                <input type="number" id="quantity-input" min="1" value="1" class="form-control w-25">
+                <button class="btn btn-success px-4" id="add-to-cart-btn">ADD TO CART</button>
+            </div>
+
+            <p class="fw-semibold">Category:
+                <span id="product-meta-category" class="text-secondary">Plants</span>
+            </p>
+
+            <div class="mt-4">
+                <p class="mb-1 fw-semibold">Guaranteed Safe Checkout</p>
+                <div class="d-flex gap-3">
+                    <i class="fa-brands fa-cc-visa fa-2x"></i>
+                    <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+                    <i class="fa-brands fa-cc-amex fa-2x"></i>
+                    <i class="fa-brands fa-cc-discover fa-2x"></i>
                 </div>
             </div>
+        </div>
+
+    </div>
+</div>
+<footer class="bg-light pt-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-lg-3">
+                <h5 class="fw-bold">Get In Touch</h5>
+                <p class="text-muted">Best quality plants & succulents delivered with care.</p>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="resource/plants-store-logo-green.svg" height="45" class="me-2">
+                    <h5 class="fw-bold">Simply Natural</h5>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <h5 class="fw-bold">Quick Links</h5>
+                <ul class="list-unstyled text-muted">
+                    <li>Introduction</li>
+                    <li>Know More About Us</li>
+                    <li>Visit Store</li>
+                    <li>Let's Connect</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <h5 class="fw-bold">Important Links</h5>
+                <ul class="list-unstyled text-muted">
+                    <li>Privacy Policy</li>
+                    <li>Shipping Details</li>
+                    <li>Terms & Conditions</li>
+                    <li>Media Kit</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="text-center py-3 mt-4 border-top">
+            <span class="text-muted">© 2025 Simply Natural — Powered by Simply Natural</span>
         </div>
     </div>
+</footer>
 
-    <footer class="footer-section">
-        <div class="row g-4" id="row-foter">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="get-in-touch-sec-inner">
-                    <h3>Get In Touch With Us For The Best Quality Plants & Succulents</h3>
-                    <p>Qui dolore ipsum quia dolor sit amet, consec tetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="websideinfo">
-                    <div class="footer-logo-con">
-                        <img src="resource/plants-store-logo-green.svg" alt="">
-                        <h3>Simply Natural</h3>
-                        <div class="icon-wrape">
-                            <button><i class="fa-brands fa-instagram"></i></button>
-                            <button><i class="fa-brands fa-twitter"></i></button>
-                            <button><i class="fa-brands fa-linkedin"></i></button>
-                            <button><i class="fa-brands fa-facebook-f"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="quick-links-inner">
-                    <h4>Quick Links</h4>
-                    <span>Introduction</span>
-                    <span>Know More About Us</span>
-                    <span>Visit Store</span>
-                    <span>Let's Connect</span>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="quick-links-inner">
-                    <h4>Important Links</h4>
-                    <span>Privacy Policy</span>
-                    <span>Shipping Details</span>
-                    <span>Terms & Conditions</span>
-                    <span>Media Kit</span>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-section">
-            <div class="row" style="margin-left: 5.552%; margin-right: 5.552%;">
-                <div class="col"><span>Copyright © 2025 Simply Natural</span></div>
-                <div class="col d-flex" style="flex-direction: row-reverse;"><span>Powered by Simply Natural</span></div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="cart-overlay"></div>
-    <div class="cart-modal">
-        <div class="cart-header">
-            <h3>Shopping Cart</h3>
-            <i class="fa-solid fa-xmark" onclick="closeCart()"></i>
-        </div>
-        <div class="cart-body"></div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Subtotal:</span>
-                <span>$0.00</span>
-            </div>
-            <button class="view-cart-btn">View Cart</button>
-            <button class="cart-checkout">Checkout</button>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="cart.js"></script>

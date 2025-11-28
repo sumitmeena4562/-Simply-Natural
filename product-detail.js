@@ -1,6 +1,9 @@
-// Get product ID from URL
 const urlParams = new URLSearchParams(window.location.search);
 const productId = parseInt(urlParams.get('id'));
+
+if (!productId) {
+    window.location.href = 'index.html';
+}
 
 // Load product details
 fetch('data.json')
@@ -12,6 +15,7 @@ fetch('data.json')
             document.getElementById('product-category').textContent = product.type;
             document.getElementById('product-title').textContent = product.name;
             document.getElementById('product-meta-category').textContent = product.type;
+            document.getElementById('product-description').textContent = product.description || 'No description available.';
             
             const priceElement = document.getElementById('product-price');
             if (product.onSale) {

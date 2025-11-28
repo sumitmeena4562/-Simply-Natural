@@ -34,7 +34,8 @@
         "price": "$34.00",
         "category": "Featured Plants",
         "onSale": false,
-        "salePrice":""
+        "salePrice":"",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     },
      {
         "id": 5,
@@ -44,9 +45,8 @@
         "price": "$28.00",
         "category": "Featured Plants",
         "onSale": true,
-        "salePrice":"$25.00"
-
-
+        "salePrice":"$25.00",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     },
     {
         "id": 6,
@@ -56,9 +56,8 @@
         "price": "$54.00",
         "category": "Featured Plants",
         "onSale": true,
-        "salePrice":"$34.00"
-
-
+        "salePrice":"$34.00",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     },
      {
         "id": 7,
@@ -68,9 +67,8 @@
         "price": "$23.00",
         "category": "Featured Plants",
         "onSale": true,
-        "salePrice":"$20.00"
-
-
+        "salePrice":"$20.00",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     },
      {
         "id": 8,
@@ -80,9 +78,8 @@
         "price": "$15.00",
         "category": "Featured Plants",
         "onSale": true,
-        "salePrice":"$12.00"
-
-
+        "salePrice":"$12.00",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     },
      {
         "id": 9,
@@ -92,9 +89,8 @@
         "price": "$32.00",
         "category": "Featured Plants",
         "onSale": false,
-        "salePrice":""
-
-
+        "salePrice":"",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     },
      {
         "id": 10,
@@ -104,9 +100,8 @@
         "price": "$45.00",
         "category": "Featured Plants",
         "onSale": false,
-        "salePrice":""
-
-
+        "salePrice":"",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     },
      {
         "id": 11,
@@ -116,9 +111,8 @@
         "price": "$34.00",
         "category": "Featured Plants",
         "onSale": true,
-        "salePrice":"$30.00"
-
-        
+        "salePrice":"$30.00",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     },
     {
         "id": 12,
@@ -128,8 +122,8 @@
         "price": "$34.00",
         "category": "Featured Plants",
         "onSale": true,
-        "salePrice":"$30.00"
-        
+        "salePrice":"$30.00",
+        "description":"Neque porro quisquam est, qui dolore ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame. Neque porro quisquam est, qui dolore ipsum quia dolor sit amet."
     }
 
 ]

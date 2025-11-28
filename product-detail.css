@@ -1,0 +1,159 @@
+.product-detail-section {
+    padding: 80px 0;
+    min-height: 70vh;
+}
+
+.product-image-container {
+    position: relative;
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.product-image-container img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.zoom-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-info {
+    padding: 20px 40px;
+}
+
+.product-category {
+    color: #8DD348;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.free-shipping {
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.product-description {
+    color: #666;
+    line-height: 1.8;
+    margin: 30px 0;
+    font-size: 15px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.quantity-input {
+    width: 80px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.add-to-cart-btn {
+    flex: 1;
+    padding: 15px 40px;
+    background: #8DD348;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #7bc239;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(141, 211, 72, 0.3);
+}
+
+.product-meta {
+    color: #666;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.product-meta span {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.guaranteed-checkout {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.guaranteed-checkout p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.payment-icons i {
+    font-size: 32px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .product-info {
+        padding: 20px 0;
+    }
+    
+    .product-title {
+        font-size: 1.8rem;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .quantity-input {
+        width: 100%;
+    }
+}

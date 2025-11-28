@@ -11,12 +11,10 @@ function createPriceHTML(item) {
           </div>`;
 }
 
-// Helper function to create sale badge
 function createSaleBadge(onSale) {
   return onSale ? '<div class="sale-wegit">Sale!</div>' : '';
 }
 
-// Helper function to create star rating
 function createStarRating() {
   return `<div class="star-rating-div">
             <i class="fa-solid fa-star"></i>
@@ -27,7 +25,6 @@ function createStarRating() {
           </div>`;
 }
 
-// Home info cards
 function getShofinfoCartd() {
   fetch("data.json")
     .then(res => res.json())
@@ -53,7 +50,6 @@ function getShofinfoCartd() {
     .catch(error => console.error('Error loading data:', error));
 }
 
-// Featured plants section
 function getplantShopData() {
   fetch("data.json")
     .then(res => res.json())
@@ -68,15 +64,15 @@ function getplantShopData() {
           return `
             <div class="col-md-3">
               <div class="card" style="width: 17rem;" id="card-none-border">
-                <div class="images-con">
+                <div class="images-con" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
                   ${createSaleBadge(item.onSale)}
                   <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                  <div class="card-on-btn-hover-effect" onclick='addToCart({id: ${item.id}, name: "${item.name}", price: ${actualPrice}, image: "${item.image}"})'><i class="fa-solid fa-bag-shopping"></i></div>
+                  <div class="card-on-btn-hover-effect" onclick='event.stopPropagation(); addToCart({id: ${item.id}, name: "${item.name}", price: ${actualPrice}, image: "${item.image}"})'><i class="fa-solid fa-bag-shopping"></i></div>
                   <div class="cart-text-div">Add to Cart</div>
                 </div>
                 <p class="type-of">${item.type}</p>
                 <div class="card-body-2">
-                  <h5 class="card-title" id="card-title-2">${item.name}</h5>
+                  <h5 class="card-title" id="card-title-2" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">${item.name}</h5>
                   ${createStarRating()}
                   ${createPriceHTML(item)}
                 </div>
@@ -88,7 +84,6 @@ function getplantShopData() {
     .catch(error => console.error('Error loading data:', error));
 }
 
-// Store page cards (items 4, 5, 6)
 function getCardataForStorePAge() {
   fetch("data.json")
     .then(res => res.json())
@@ -104,10 +99,10 @@ function getCardataForStorePAge() {
               ${createSaleBadge(item.onSale)}
               <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
               <div class="cart-text-div">Add to Cart</div>
-              <img src="${item.image}" class="card-img-top-2" alt="${item.name}">
+              <img src="${item.image}" class="card-img-top-2" alt="${item.name}" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
               <div class="card-body-2">
                 <p class="type-of mt-2">${item.type}</p>
-                <h5 class="card-title">${item.name}</h5>
+                <h5 class="card-title" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">${item.name}</h5>
                 ${createStarRating()}
                 ${createPriceHTML(item)}
               </div>
@@ -118,7 +113,6 @@ function getCardataForStorePAge() {
     .catch(error => console.error('Error loading data:', error));
 }
 
-// Plant collection cards (items > 3)
 function getData_forPalntCollection_card() {
   fetch("data.json")
     .then(res => res.json())
@@ -134,10 +128,10 @@ function getData_forPalntCollection_card() {
               ${createSaleBadge(item.onSale)}
               <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
               <div class="cart-text-div">Add to Cart</div>
-              <img src="${item.image}" class="card-img-top-2" alt="${item.name}">
+              <img src="${item.image}" class="card-img-top-2" alt="${item.name}" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
               <div class="card-body-2" style="background-color: #F9F9F9;">
                 <p class="type-of mt-2">${item.type}</p>
-                <h5 class="card-title">${item.name}</h5>
+                <h5 class="card-title" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">${item.name}</h5>
                 ${createStarRating()}
                 ${createPriceHTML(item)}
               </div>
@@ -148,7 +142,6 @@ function getData_forPalntCollection_card() {
     .catch(error => console.error('Error loading data:', error));
 }
 
-// Plants only
 function getOnlyplant() {
   fetch("data.json")
     .then(res => res.json())
@@ -161,15 +154,15 @@ function getOnlyplant() {
         .map(item => `
           <div class="col-md-3">
             <div class="card border-0" style="width: 17rem;" id="card-none-border">
-              <div class="images-con">
+              <div class="images-con" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
                 ${createSaleBadge(item.onSale)}
                 <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="card-on-btn-hover-effect" onclick="event.stopPropagation();"><i class="fa-solid fa-bag-shopping"></i></div>
                 <div class="cart-text-div">Add to Cart</div>
               </div>
               <p class="type-of">${item.type}</p>
               <div class="card-body-2">
-                <h5 class="card-title" id="card-title-2">${item.name}</h5>
+                <h5 class="card-title" id="card-title-2" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">${item.name}</h5>
                 ${createStarRating()}
                 ${createPriceHTML(item)}
               </div>
@@ -180,7 +173,6 @@ function getOnlyplant() {
     .catch(error => console.error('Error loading data:', error));
 }
 
-// Cactus only
 function getOnlyCactos() {
   fetch("data.json")
     .then(res => res.json())
@@ -193,15 +185,15 @@ function getOnlyCactos() {
         .map(item => `
           <div class="col-md-3">
             <div class="card border-0" style="width: 17rem;" id="card-none-border">
-              <div class="images-con">
+              <div class="images-con" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
                 ${createSaleBadge(item.onSale)}
                 <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
-                <div class="card-on-btn-hover-effect"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="card-on-btn-hover-effect" onclick="event.stopPropagation();"><i class="fa-solid fa-bag-shopping"></i></div>
                 <div class="cart-text-div">Add to Cart</div>
               </div>
               <p class="type-of">${item.type}</p>
               <div class="card-body-2">
-                <h5 class="card-title" id="card-title-2">${item.name}</h5>
+                <h5 class="card-title" id="card-title-2" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">${item.name}</h5>
                 ${createStarRating()}
                 ${createPriceHTML(item)}
               </div>
@@ -212,7 +204,6 @@ function getOnlyCactos() {
     .catch(error => console.error('Error loading data:', error));
 }
 
-// Initialize all functions
 getShofinfoCartd();
 getplantShopData();
 getCardataForStorePAge();
@@ -220,7 +211,6 @@ getData_forPalntCollection_card();
 getOnlyplant();
 getOnlyCactos();
 
-// Active page navigation
 document.addEventListener('DOMContentLoaded', function() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');

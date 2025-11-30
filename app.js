@@ -63,7 +63,7 @@ function getplantShopData() {
           const actualPrice = item.onSale ? parseFloat(item.salePrice.replace('$', '')) : parseFloat(item.price.replace('$', ''));
           return `
             <div class="col-md-3">
-              <div class="card" style="width: 17rem;" id="card-none-border">
+              <div class="card" id="card-none-border">
                 <div class="images-con" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
                   ${createSaleBadge(item.onSale)}
                   <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
@@ -153,7 +153,7 @@ function getOnlyplant() {
         .filter(item => item.type === "Plants")
         .map(item => `
           <div class="col-md-3">
-            <div class="card border-0" style="width: 17rem;" id="card-none-border">
+            <div class="card border-0" id="card-none-border">
               <div class="images-con" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
                 ${createSaleBadge(item.onSale)}
                 <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
@@ -184,7 +184,7 @@ function getOnlyCactos() {
         .filter(item => item.type === "Cactus")
         .map(item => `
           <div class="col-md-3">
-            <div class="card border-0" style="width: 17rem;" id="card-none-border">
+            <div class="card border-0" id="card-none-border">
               <div class="images-con" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
                 ${createSaleBadge(item.onSale)}
                 <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">

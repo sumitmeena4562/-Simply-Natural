@@ -6,6 +6,7 @@ function loadCartPage() {
     
     if (cart.length === 0) {
         tbody.innerHTML = '<tr class="empty-cart"><td colspan="4" style="text-align: center; padding: 60px 20px; color: #999;">Your cart is empty</td></tr>';
+        updateCartTotals(0);
         return;
     }
     
@@ -25,6 +26,14 @@ function loadCartPage() {
             <td>$${(item.price * item.quantity).toFixed(2)}</td>
         </tr>
     `).join('');
+    
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    updateCartTotals(total);
+}
+
+function updateCartTotals(total) {
+    document.getElementById('cart-subtotal').textContent = `$${total.toFixed(2)}`;
+    document.getElementById('cart-total').textContent = `$${total.toFixed(2)}`;
 }
 
 function removeFromCartPage(index) {

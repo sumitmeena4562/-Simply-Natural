@@ -8,11 +8,9 @@ function updateCart() {
         el.textContent = `$${totalPrice.toFixed(2)}`;
     });
     
-    // Update cart count badge
-    document.querySelectorAll('.nav-icons div span').forEach(badge => {
-        if (badge.style.position === 'absolute') {
-            badge.textContent = totalItems;
-        }
+    // Update cart count badge using class
+    document.querySelectorAll('.cart-badge').forEach(badge => {
+        badge.textContent = totalItems;
     });
     
     renderCartItems();

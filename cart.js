@@ -2,9 +2,17 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateCart() {
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     
     document.querySelectorAll('.price').forEach(el => {
         el.textContent = `$${totalPrice.toFixed(2)}`;
+    });
+    
+    // Update cart count badge
+    document.querySelectorAll('.nav-icons div span').forEach(badge => {
+        if (badge.style.position === 'absolute') {
+            badge.textContent = totalItems;
+        }
     });
     
     renderCartItems();

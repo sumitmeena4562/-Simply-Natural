@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="store.css">
     <link rel="stylesheet" href="cart-modal.css">
     <link rel="stylesheet" href="responsive.css">
@@ -26,8 +27,8 @@
             <h1>Store</h1>
 
         </div>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg px-5">
+            <div class="container-fluid px-3">
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
                     <img id="web-name-logo-side" src="resource/plants-store-logo-green.svg" alt="Simply Natural Logo">
                     Simply Natural
@@ -59,9 +60,12 @@
                     </ul>
 
                     <div class="nav-icons d-flex align-items-center">
-                        <span class="price me-2">$0.00</span>
-                        <i class="fa-solid fa-bag-shopping me-2" style="color:#4CAF50;"></i>
-                        <i class="fa-solid fa-user"></i>
+                        <span class="price me-3" style="color: #8DD348; font-weight: 600;">$0.00</span>
+                        <div style="position: relative; margin-right: 15px;">
+                            <i class="fa-solid fa-bag-shopping" style="color:#333; font-size: 18px;"></i>
+                            <span style="position: absolute; top: -8px; right: -10px; background: #8DD348; color: white; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600;">0</span>
+                        </div>
+                        <i class="fa-solid fa-user" style="color: #333; font-size: 18px;"></i>
                     </div>
                 </div>
             </div>
@@ -260,61 +264,61 @@
             </div>
         </div>
 
-        <footer style="background-color: #f5f5f5; padding: 80px 0 0 0;">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-3">
-                        <h4 style="font-size: 20px; font-weight: 600; color: #2c3e50; margin-bottom: 25px; line-height: 1.4;">Get In Touch With Us For The Best Quality Plants & Succulents</h4>
-                        <p style="color: #6c757d; font-size: 14px; line-height: 1.8;">Qui dolore ipsum quia dolor sit amet, consec tetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta porro ame.</p>
+        <footer class="footer-section">
+            <div class="row g-4" id="row-foter">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="get-in-touch-sec-inner">
+                        <h3 style="font-size: 1.25rem; line-height: 1em; margin-bottom: 5%;">Get In Touch With Us For
+                            The Best Quality Plants & Succulents</h3>
+                        <p style="font-size: 14px; color: #5d6167;line-height: 1.6em; ">Qui dolore ipsum quia dolor sit
+                            amet, consec tetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta
+                            porro ame.</p>
                     </div>
-
-                    <div class="col-lg-3 text-center">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="resource/plants-store-logo-green.svg" height="80" style="margin-bottom: 20px;">
-                            <h4 style="font-size: 24px; font-weight: 600; color: #2c3e50; margin-bottom: 25px;">Simply Natural</h4>
-                            <div class="d-flex gap-2">
-                                <div style="width: 45px; height: 45px; background: #4E5768; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <i class="fa-brands fa-instagram" style="color: white; font-size: 18px;"></i>
-                                </div>
-                                <div style="width: 45px; height: 45px; background: #4E5768; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <i class="fa-brands fa-twitter" style="color: white; font-size: 18px;"></i>
-                                </div>
-                                <div style="width: 45px; height: 45px; background: #4E5768; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <i class="fa-brands fa-linkedin" style="color: white; font-size: 18px;"></i>
-                                </div>
-                                <div style="width: 45px; height: 45px; background: #4E5768; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <i class="fa-brands fa-facebook-f" style="color: white; font-size: 18px;"></i>
-                                </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="websideinfo">
+                        <div style="height: 100px;" class="footer-logo-con">
+                            <img style="width: 100%; height: 100%; margin-bottom: 10%;"
+                                src="resource/plants-store-logo-green.svg" alt="">
+                            <h3 style="font-size: 1.55rem; margin-bottom: 10%;">Simply Natural</h3>
+                            <div class="icon-wrape">
+                                <button><i class="fa-brands fa-instagram"></i></button>
+                                <button><i class="fa-brands fa-twitter"></i></button>
+                                <button><i class="fa-brands fa-linkedin"></i></button>
+                                <button><i class="fa-brands fa-facebook-f"></i></button>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="quick-links-inner ">
+                        <h4 style="font-size: 20px; margin-bottom: 11%;">Quick Links</h4>
+                        <span>Introduction</span>
+                        <span>Know More About Us</span>
+                        <span>Visit Store</span>
+                        <span>Let's Connect</span>
 
-                    <div class="col-lg-3">
-                        <h4 style="font-size: 20px; font-weight: 600; color: #2c3e50; margin-bottom: 25px;">Quick Links</h4>
-                        <ul class="list-unstyled" style="color: #6c757d; font-size: 14px; line-height: 2.5;">
-                            <li style="cursor: pointer;">Introduction</li>
-                            <li style="cursor: pointer;">Know more About Us</li>
-                            <li style="cursor: pointer;">Visit Store</li>
-                            <li style="cursor: pointer;">Let's Connect</li>
-                        </ul>
                     </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="quick-links-inner ">
+                        <h4 style="font-size: 20px; margin-bottom: 11%;">Important Links</h4>
+                        <span>Privacy Policy</span>
+                        <span>Shipping Details</span>
+                        <span>Terms & Conditions</span>
+                        <span>Media Kit</span>
 
-                    <div class="col-lg-3">
-                        <h4 style="font-size: 20px; font-weight: 600; color: #2c3e50; margin-bottom: 25px;">Important Links</h4>
-                        <ul class="list-unstyled" style="color: #6c757d; font-size: 14px; line-height: 2.5;">
-                            <li style="cursor: pointer;">Privacy Policy</li>
-                            <li style="cursor: pointer;">Shipping Details</li>
-                            <li style="cursor: pointer;">Terms & Conditions</li>
-                            <li style="cursor: pointer;">Media Kit</li>
-                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <div style="background-color: #e8e8e8; margin-top: 60px; padding: 25px 0;">
-                <div class="container">
-                    <div class="text-center">
-                        <span style="color: #6c757d; font-size: 13px;">Copyright © 2025 Simply Natural</span>
+
+            <div class="copyright-section" style="font-size: 0.9rem;">
+                <div class="row" style=" margin-left: 5.552%; margin-right: 5.552%;">
+                    <div class="col">
+                        <span>Copyright © 2025 Simply Natural</span>
+                    </div>
+                    <div class="col d-flex" style="flex-direction: row-reverse;">
+                        <span>Powered by Simply Natural</span>
                     </div>
                 </div>
             </div>

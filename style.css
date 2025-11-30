@@ -324,6 +324,10 @@ body {
     opacity: 1;
 }
 
+.card:hover .card-on-btn-hover-effect {
+    opacity: 1;
+}
+
 .card-on-btn-hover-effect:hover+.cart-text-div {
     opacity: 1;
 }

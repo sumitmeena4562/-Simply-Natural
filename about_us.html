@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about_us.css">
     <link rel="stylesheet" href="cart-modal.css">
     <link rel="stylesheet" href="responsive.css">
@@ -59,9 +60,12 @@
                     </ul>
 
                     <div class="nav-icons d-flex align-items-center">
-                        <span class="price me-2">$0.00</span>
-                        <i class="fa-solid fa-bag-shopping me-2" style="color:#4CAF50;"></i>
-                        <i class="fa-solid fa-user"></i>
+                        <span class="price me-3" style="color: #8DD348; font-weight: 600;">$0.00</span>
+                        <div style="position: relative; margin-right: 15px;">
+                            <i class="fa-solid fa-bag-shopping" style="color:#333; font-size: 18px;"></i>
+                            <span style="position: absolute; top: -8px; right: -10px; background: #8DD348; color: white; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600;">0</span>
+                        </div>
+                        <i class="fa-solid fa-user" style="color: #333; font-size: 18px;"></i>
                     </div>
                 </div>
             </div>
@@ -222,30 +226,23 @@
 
 
     <footer class="footer-section">
-
-        <div class="row" id="row-foter">
-
-            <!-- 1st Column -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="row g-4" id="row-foter">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="get-in-touch-sec-inner">
-                    <h3 style="font-size: 1.25rem; margin-bottom: 5%;">Get In Touch With Us For
+                    <h3 style="font-size: 1.25rem; line-height: 1em; margin-bottom: 5%;">Get In Touch With Us For
                         The Best Quality Plants & Succulents</h3>
-                    <p style="font-size: 14px; color: #5d6167; line-height: 1.6em;">
-                        Qui dolore ipsum quia dolor sit amet, consec tetur adipisci velit, sed quia non numquam eius
-                        modi
-                        tempora incidunt.
-                    </p>
+                    <p style="font-size: 14px; color: #5d6167;line-height: 1.6em; ">Qui dolore ipsum quia dolor sit
+                        amet, consec tetur adipisci velit, sed quia non numquam eius modi tempora incidunt lores ta
+                        porro ame.</p>
                 </div>
             </div>
-
-            <!-- 2nd Column (Logo Section) -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="websideinfo text-center">
-                    <div class="footer-logo-con" style="height: auto;">
-                        <img src="resource/plants-store-logo-green.svg" style="width: 80px; margin-bottom: 10%;" alt="">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="websideinfo">
+                    <div style="height: 100px;" class="footer-logo-con">
+                        <img style="width: 100%; height: 100%; margin-bottom: 10%;"
+                            src="resource/plants-store-logo-green.svg" alt="">
                         <h3 style="font-size: 1.55rem; margin-bottom: 10%;">Simply Natural</h3>
-
-                        <div class="icon-wrape" style="display:flex; justify-content:center; gap:10px;">
+                        <div class="icon-wrape">
                             <button><i class="fa-brands fa-instagram"></i></button>
                             <button><i class="fa-brands fa-twitter"></i></button>
                             <button><i class="fa-brands fa-linkedin"></i></button>
@@ -254,43 +251,38 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 3rd Column -->
-            <div class="col-lg-2 col-md-6 col-sm-12">
-                <div class="quick-links-inner">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="quick-links-inner ">
                     <h4 style="font-size: 20px; margin-bottom: 11%;">Quick Links</h4>
                     <span>Introduction</span>
                     <span>Know More About Us</span>
                     <span>Visit Store</span>
                     <span>Let's Connect</span>
+
                 </div>
             </div>
-
-            <!-- 4th Column -->
-            <div class="col-lg-2 col-md-6 col-sm-12">
-                <div class="quick-links-inner">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="quick-links-inner ">
                     <h4 style="font-size: 20px; margin-bottom: 11%;">Important Links</h4>
                     <span>Privacy Policy</span>
                     <span>Shipping Details</span>
                     <span>Terms & Conditions</span>
                     <span>Media Kit</span>
+
                 </div>
             </div>
         </div>
 
-        <!-- -------------------- Copyright ------------------------ -->
-
         <div class="copyright-section" style="font-size: 0.9rem;">
-            <div class="row px-4">
+            <div class="row" style=" margin-left: 5.552%; margin-right: 5.552%;">
                 <div class="col">
                     <span>Copyright © 2025 Simply Natural</span>
                 </div>
-                <div class="col text-end">
+                <div class="col d-flex" style="flex-direction: row-reverse;">
                     <span>Powered by Simply Natural</span>
                 </div>
             </div>
         </div>
-
     </footer>
 
 

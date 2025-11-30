@@ -324,10 +324,6 @@ body {
     opacity: 1;
 }
 
-.card:hover .card-on-btn-hover-effect {
-    opacity: 1;
-}
-
 .card-on-btn-hover-effect:hover+.cart-text-div {
     opacity: 1;
 }
@@ -588,9 +584,14 @@ body {
     border: none;
     background: #4E5768;
     color: #EEEDF3;
-    padding: 2.4% 3.11%;
+    padding: 10px 12px;
     font-size: 0.9rem;
-
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .websideinfo {
@@ -797,5 +798,9 @@ body {
     .interested-section-containt-p{
         font-size: 0.6rem;
         width: 100%;
+    }
+    
+    .card-on-btn-hover-effect {
+        opacity: 1;
     }
 }

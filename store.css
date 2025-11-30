@@ -338,25 +338,7 @@ body {
     flex-direction: column;
 }
 
-.icon-wrape {
-    display: flex;
-    width: 45%;
-    align-items: center;
-    justify-content: space-evenly;
-}
 
-.icon-wrape i {
-    font-size: 15px;
-    background: #4E5768;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    height: 35px;
-    width: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #footer-wrp-row{
     padding: 32px 64px;

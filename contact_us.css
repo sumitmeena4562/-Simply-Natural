@@ -124,37 +124,7 @@ iframe {
     flex-direction: column;
 }
 
-.icon-wrape {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
 
-.icon-wrape button {
-    border: none;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-}
-
-.icon-wrape i {
-    font-size: 15px;
-    background: #4E5768;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    height: 35px;
-    width: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s;
-}
-
-.icon-wrape button:hover i {
-    background: #8DD348;
-}
 
 #footer-wrp-row{
     padding: 32px 64px;

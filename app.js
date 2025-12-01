@@ -1,4 +1,3 @@
-// Helper function to create price HTML
 function createPriceHTML(item) {
   if (item.onSale) {
     return `<div class="price-oncard">
@@ -152,7 +151,7 @@ function getOnlyplant() {
       container.innerHTML = data
         .filter(item => item.type === "Plants")
         .map(item => `
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-4">
             <div class="card border-0" id="card-none-border">
               <div class="images-con" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
                 ${createSaleBadge(item.onSale)}
@@ -183,11 +182,11 @@ function getOnlyCactos() {
       container.innerHTML = data
         .filter(item => item.type === "Cactus")
         .map(item => `
-          <div class="col-md-3">
+          <div class="col-6 col-sm-6 col-md-6 col-lg-3">
             <div class="card border-0" id="card-none-border">
               <div class="images-con" onclick="window.location.href='product-detail.html?id=${item.id}'" style="cursor: pointer;">
                 ${createSaleBadge(item.onSale)}
-                <img style="height: 17rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
+                <img style="height: 12rem;" src="${item.image}" class="card-img-top-2" alt="${item.name}">
                 <div class="card-on-btn-hover-effect" onclick="event.stopPropagation();"><i class="fa-solid fa-bag-shopping"></i></div>
                 <div class="cart-text-div">Add to Cart</div>
               </div>

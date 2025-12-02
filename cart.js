@@ -8,7 +8,6 @@ function updateCart() {
         el.textContent = `$${totalPrice.toFixed(2)}`;
     });
     
-    // Update cart count badge using class
     document.querySelectorAll('.cart-badge').forEach(badge => {
         badge.textContent = totalItems;
     });

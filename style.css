@@ -226,6 +226,7 @@ body {
 
 .card-body-2 {
     display: flex;
+    flex-direction: column !important;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: space-between;
@@ -255,7 +256,7 @@ body {
 }
 
 .star-rating-div {
-    height: 30%;
+    height: 15%;
     width: 100%;
     display: flex;
 }
@@ -269,7 +270,7 @@ body {
 }
 
 .price-oncard {
-    height: 28%;
+    height: 18%;
     width: 100%;
     display: flex;
     margin-bottom: 6.78px;
